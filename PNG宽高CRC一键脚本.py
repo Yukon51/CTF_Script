@@ -6,12 +6,12 @@ import itertools
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-t", type=str, default=None, required=True,
+parser.add_argument("-f", type=str, default=None, required=True,
                     help="输入同级目录下图片的名称")
 args  = parser.parse_args()
 
 
-image_data = open(args.t, 'rb')
+image_data = open(args.f, 'rb')
 bin_data = image_data.read()
 crc32key = zlib.crc32(bin_data[12:29])  # 使用函数计算
 if crc32key == int(bin_data[29:33].hex(), 16):  # 对比算出的CRC和原本的CRC
