@@ -23,9 +23,8 @@ else:
     if input_ not in ["Y", "y", ""]:
         exit()
     else:
-        crcbp = open(args.t, "rb").read()    #打开图片
-        crc32frombp = int(crcbp[29:33].hex(),16)     #读取图片中的CRC校验值
-        print(crc32frombp)
+        crcbp = open(args.f, "rb").read()    #打开图片
+        crc32frombp = int(crcbp[29:33].hex(), 16)     #读取图片中的CRC校验值
         for i, j in itertools.product(range(4000), range(4000)):
             data = crcbp[12:16] + \
                 struct.pack('>i', i)+struct.pack('>i', j)+crcbp[24:29]
