@@ -20,6 +20,7 @@ file_head = {
     "7F454C46": "ELF",
     "03F30D0A": "PYC",
     "52494646": "WEBP",
+    "8004": "Python-Pickle"
 }
 
 with open(args.f, "rb") as f:
