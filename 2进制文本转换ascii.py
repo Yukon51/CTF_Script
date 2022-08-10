@@ -23,8 +23,8 @@ if input_ not in ["N", "n", ""]:
     cipher = "".join("1" if i == "0" else "0" for i in cipher)
 
 # 正常情况
-print(f"{Fore.RED} [7Bit]: {Fore.BLUE}{BintoAsc(cipher, 7)}")
-print(f"{Fore.RED} [8Bit]: {Fore.BLUE}{BintoAsc(cipher, 8)}")
+print(f"{Fore.RED}[7Bit]: {Fore.BLUE}{BintoAsc(cipher, 7)}")
+print(f"{Fore.RED}[8Bit]: {Fore.BLUE}{BintoAsc(cipher, 8)}")
 print()
 
 # 特殊情况1
