@@ -7,6 +7,8 @@ Example:
 
     {X1: Y1, X2: Y2, ..., Xn: Yn}
 '''
+
+
 import argparse
 
 parser = argparse.ArgumentParser()
@@ -17,4 +19,12 @@ args  = parser.parse_args()
 
 N = args.t
 ret = {X: int(N / X) for X in range(1, N) if N % X == 0}
-print(ret)
+
+print(f"一共有 {len(ret)} 种情况:")
+print(ret, end="\n\n")
+
+print("筛选后:")
+for k, v in ret.items():
+    number = k / v
+    if 20 > number > 0.01:
+        print(k, v)
