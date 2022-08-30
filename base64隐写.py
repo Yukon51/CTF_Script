@@ -24,7 +24,7 @@ data = [i.replace("\n", "") for i in data]
 6.将每行提取出的隐写位依次连接起来，每8位为一组转换为ASCII字符，最后不足8位的丢弃。
 '''
 
-binstring = ""
+bin_str = ""
 for cipher in data:
     flag = 0
     if cipher[-1:] == "=":
@@ -33,8 +33,8 @@ for cipher in data:
             flag = 2
     
     if flag == 1:
-        binstring += bin(key.index(cipher[-2]))[2:].zfill(8)[-2:]
+        bin_str += bin(key.index(cipher[-2]))[2:].zfill(8)[-2:]
     elif flag == 2:
-        binstring += bin(key.index(cipher[-3]))[2:].zfill(8)[-4:]
+        bin_str += bin(key.index(cipher[-3]))[2:].zfill(8)[-4:]
 
-print("".join(chr(int(binstring[i*8:i*8+8], 2)) for i in range(len(binstring) // 8)))
+print("".join(chr(int(bin_str[i*8:i*8+8], 2)) for i in range(len(bin_str) // 8)))
