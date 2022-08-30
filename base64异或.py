@@ -2,7 +2,7 @@ import base64
 
 
 # 1.先解开base64
-b = base64.b64decode('aWdxNDs0NDFSOzFpa1I1MWliT08w')
+b = base64.b64decode('aWdxNDs1NDFSOzFpa1I1MWliT08w')
 # 2.转换为ascii十进制
 data = list(b)
 
