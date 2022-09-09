@@ -45,11 +45,11 @@ if not flag:
     print("没有异或到符合的文件头!")
 
 # not取反
-flag = 0
 not_data = b""
-for i in data:
-    not_data += ((256 - i) % 256).to_bytes(1, byteorder="big", signed=False)
+for i in range(len(max(list(file_head.keys()), key=lambda x: len(x))) // 2): # 取最长的head_file的头除以二即可
+    not_data += ((256 - data[i]) % 256).to_bytes(1, byteorder="big", signed=False)
 
+flag = 0
 for head, value in file_head.items():
     ret = []
     for i, j in enumerate(range(0, len(head), 2)):
@@ -66,5 +66,3 @@ for head, value in file_head.items():
 
 if not flag:
     print("取反没有得到符合的文件头!")
-else:
-    save_file(not_data)
