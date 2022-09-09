@@ -1,5 +1,6 @@
 import os
 import cv2
+import shutil
 import argparse
 import itertools
 import numpy as np
@@ -8,7 +9,7 @@ from tqdm import tqdm
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-size', type=int, default=1,
-                    help='图片放大倍数(默认1倍)')
+                    help='图片放大倍数(默认1倍) 待开发')
 args = parser.parse_args()
 # INTER_NEAREST
 
@@ -44,6 +45,10 @@ def split_channel_bit(img, height, width):
     np_bit = np.where(np_bit == 0, 0, 255) # 如果为0就是0黑色，如果为1就为255白色
     np_bit.astype(np.uint8) # 类型转换
     return np_bit
+
+# delete target and makedirs
+shutil.rmtree(target_path)
+os.makedirs(target_path)
 
 with tqdm(enumerate(os.listdir(source_path)), desc="Channel Split") as bar:
     for index, file_name in bar:
