@@ -1,5 +1,6 @@
 import os
 import cv2
+import time
 import shutil
 import argparse
 import itertools
@@ -46,6 +47,9 @@ def split_channel_bit(img, height, width):
     np_bit.astype(np.uint8) # 类型转换
     return np_bit
 
+def colour_inversion(img):
+    return 255 ^ img
+
 # delete target and makedirs
 shutil.rmtree(target_path)
 os.makedirs(target_path)
@@ -56,13 +60,16 @@ with tqdm(enumerate(os.listdir(source_path)), desc="Channel Split") as bar:
         img_path = os.path.join(source_path, f"{file_name}")
         rename_path = img_rename(img_path, index)
 
-        # create target dirs
+        # create save dirs
         save_path = os.path.join(target_path, f"{index}")
         makedir(save_path)
-
-        # img = Image.open(rename_path)
+        
+        # read img
         img = cv2.imread(rename_path, -1)
         height, width, channel = img.shape
+
+        # image inversion
+        cv2.imwrite(os.path.join(save_path, "colour inversion.png"), colour_inversion(img))
 
         # split channel
         channel_dic = get_channel_dic(channel)
