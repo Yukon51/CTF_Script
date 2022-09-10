@@ -1,6 +1,5 @@
 import os
 import cv2
-import time
 import shutil
 import argparse
 import itertools
