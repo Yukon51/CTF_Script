@@ -68,7 +68,7 @@ with tqdm(enumerate(os.listdir(source_path)), desc="Channel Split") as bar:
         height, width, channel = img.shape
 
         # image inversion
-        cv2.imwrite(os.path.join(save_path, "colour inversion.png"), colour_inversion(img))
+        cv2.imwrite(os.path.join(save_path, "Colour Inversion.png"), colour_inversion(img))
 
         # split channel
         channel_dic = get_channel_dic(channel)
