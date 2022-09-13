@@ -10,6 +10,8 @@ from tqdm import tqdm
 parser = argparse.ArgumentParser()
 parser.add_argument('-size', type=int, default=1,
                     help='图片放大倍数(默认1倍) 待开发')
+parser.add_argument('-inversion', nargs='?', const=True, default=False,
+                    help='是否图片反色(默认关闭)')
 args = parser.parse_args()
 # INTER_NEAREST
 
@@ -27,13 +29,14 @@ def makedir(path):
     if not os.path.exists(path):
         os.makedirs(path)
 
-def get_channel_dic(channel):
-    if channel == 1:
-        channel_dic = ["Gray"]
-    elif channel == 3:
-        channel_dic = ["Blue", "Green", "Red"]
-    elif channel == 4:
-        channel_dic = ["Blue", "Green", "Red", "Alpha"]
+def get_channel_dic(shape):
+    try:
+        if shape[2] == 3:
+            channel_dic = ["Blue", "Green", "Red"]
+        elif shape[2] == 4:
+            channel_dic = ["Blue", "Green", "Red", "Alpha"]
+    except IndexError:
+        return ["Gray"]
     return channel_dic
 
 def split_channel_bit(img, height, width):
@@ -62,18 +65,19 @@ with tqdm(enumerate(os.listdir(source_path)), desc="Channel Split") as bar:
         # create save dirs
         save_path = os.path.join(target_path, f"{index}")
         makedir(save_path)
-        
+
         # read img
-        img = cv2.imread(rename_path, -1)
-        height, width, channel = img.shape
+        img = cv2.imread(rename_path, cv2.IMREAD_UNCHANGED)
+        height, width = img.shape[:2]
 
         # image inversion
-        cv2.imwrite(os.path.join(save_path, "Colour Inversion.png"), colour_inversion(img))
+        if args.inversion:
+            cv2.imwrite(os.path.join(save_path, "Colour Inversion.png"), colour_inversion(img))
 
         # split channel
-        channel_dic = get_channel_dic(channel)
+        channel_dic = get_channel_dic(img.shape)
         for channel, channel_str in enumerate(channel_dic):
-            channel_img = img[:, :, channel]
+            channel_img = img[:, :] if len(channel_dic) == 1 else img[:, :, channel]
             np_bit = split_channel_bit(channel_img, height, width)
             for i in range(8):
                 cv2.imwrite(os.path.join(save_path, f"{channel_str} plane {i}.png"), np_bit[:, 7-i].reshape(height, width, 1))
