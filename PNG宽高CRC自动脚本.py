@@ -29,3 +29,4 @@ if crc32key != original_crc32: # 计算crc对比原始crc
                 print(f"宽度: {width}, hex: {hex(width)}")
                 print(f"高度: {height}, hex: {hex(height)}")
                 f.write(bin_data[:16] + struct.pack(">i", width) + struct.pack(">i", height) + bin_data[24:])
+                exit()
