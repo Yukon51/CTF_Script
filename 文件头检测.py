@@ -1,3 +1,4 @@
+import os
 import argparse
 
 
@@ -23,11 +24,6 @@ file_head = {
     "8004": "Python-Pickle",
     "????????66747970": "MP4/M4A/MOV/3GP",
 }
-
-def save_file(data):
-    with open("out.bin", "wb") as f:
-        print("已帮您自动保存到当前目录!")
-        f.write(data)
 
 with open(args.f, "rb") as f:
     data = f.read()
@@ -66,3 +62,5 @@ for head, value in file_head.items():
 
 if not flag:
     print("取反没有得到符合的文件头!")
+
+os.system("pause")
