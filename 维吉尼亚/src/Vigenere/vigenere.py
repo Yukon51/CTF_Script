@@ -3,9 +3,9 @@ import string
 
 class Vigenere:
 
-    def __init__(self, key: str, tables=None, row_table=None, col_table=None) -> None:
+    def __init__(self, key=None, tables=None, row_table=None, col_table=None) -> None:
         # 正常情况col_table为标准表
-        self.key = key.upper()
+        self.key = None if key is None else key.upper()
         self.row_table = string.ascii_uppercase if row_table is None else row_table
         self.col_table = string.ascii_uppercase if col_table is None else col_table
         self.tables = self.create_table() if tables is None else tables
@@ -21,6 +21,7 @@ class Vigenere:
         """
         先找到明文所在列的位置，再找到密钥所在行的位置，相交的位置就为密文。
         """
+        assert self.key is not None, "密钥为空,你不可以进行加密,你只可以进行推出密钥"
         key_offset = 0
         cipher_text = ""
         for chr in plan_text.upper():
@@ -38,6 +39,7 @@ class Vigenere:
         """
         先找到密钥所在行的位置，然后找到密文对应的列的位置，就是明文。
         """
+        assert self.key is not None, "密钥为空,你不可以进行加密,你只可以进行推出密钥"
         key_offset = 0
         plan_text = ""
         for chr in cipher_text.upper():
@@ -50,6 +52,18 @@ class Vigenere:
             else:
                 plan_text += chr
         return plan_text
+
+    def get_key(self, cipher_text, plan_text):
+        plan_text = plan_text.upper()
+        cipher_text = cipher_text.upper()
+        key = ""
+        for offset, chr in enumerate(plan_text.upper()):
+            if chr in string.ascii_uppercase and cipher_text[offset % len(cipher_text)] in string.ascii_uppercase:
+                col = self.col_table.index(chr)
+                col_table = [i[col] for i in self.tables]
+                row = col_table.index(cipher_text[offset % len(cipher_text)])
+                key += self.row_table[row]
+        return key
 
 if __name__ == "__main__":
     tables = [
