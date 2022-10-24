@@ -20,7 +20,7 @@ def input_key():
     exit(-1)
 
 def input_table():
-    table = console.input("[bold red][+] 请输入标注表(回车则默认使用标准表): [/bold red]")
+    table = console.input("[bold red][+] 请输入标注表[/bold red][bold blue](回车则默认使用标准表): [/bold blue]")
 
     if table == "": # 如果标准表为空返回None
         return None
@@ -30,7 +30,7 @@ def input_table():
     exit(-1)
 
 def input_tables():
-    tables = console.input("[bold red][+] 请输入26x26密码表(回车则默认使用标注密码表): [/bold red]")
+    tables = console.input("[bold red][+] 请输入26x26密码表[/bold red][bold blue](回车则默认使用标注密码表): [/bold blue]")
     if tables == "":
         return None
     tables = [list(i) for i in tables.split(",")]
@@ -55,7 +55,7 @@ def output_table(tables, plan_text=None, cipher_text=None, encipher=False):
 if __name__ == "__main__":
     console.print("Byxs20's Vigenere Cipher Tools", style="bold magenta")
 
-    if console.input("[bold magenta][+] 请问是否需要加密?(回车默认为解密)[/bold magenta]([bold red]y[/bold red]/[bold blue]N[/bold blue]): ") in ["N", ""]:
+    if (choice := console.input("[bold magenta][+] 请问选择您的操作? [bold blue] <1.加密, 2.解密, 3.推算密钥>(回车默认解密): [/bold blue][/bold magenta]")) in ["", "2"]:
         cipher_text = console.input("[bold red][+] Input Cipher Text: [/bold red]")
         key = input_key()
         table = input_table()
@@ -71,7 +71,7 @@ if __name__ == "__main__":
             caesar(plan_text)
         else:
             output_table(tables=tables, cipher_text=cipher_text, encipher=False)
-    else:
+    elif choice == "1":
         plan_text = console.input("[bold red][+] Input Plan Text: [/bold red]")
         key = input_key()
         table = input_table()
@@ -87,3 +87,12 @@ if __name__ == "__main__":
             caesar(plan_text)
         else:
             output_table(tables=tables, plan_text=plan_text, encipher=True)
+    elif choice == "3":
+        table = input_table()
+        tables = input_tables()
+        cipher_text = console.input("[bold red][+] Input Cipher Text: [/bold red]")
+        plan_text = console.input("[bold red][+] Input Plan Text[bold /red][bold blue](回车默认使用FLAG作为明文): [/bold blue]")
+        if plan_text == "":
+            plan_text = "flag"
+        key = Vigenere.Vigenere(tables=tables, col_table=table).get_key(cipher_text, plan_text)
+        console.print(f"\n[-] 推算密钥: {key}", style="bold red on white")
