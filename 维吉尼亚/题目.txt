@@ -1,0 +1,32 @@
+密钥：THISISKEY
+密文：MWBJ{GFFNJXAIMX}
+
+
+     A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z
+----------------------------------------------------------------------------------
+A || J  W  K  D  T  B  E  V  U  X  A  G  M  C  N  Y  R  S  I  Z  L  F  P  Q  O  H
+B || Y  C  T  V  Q  G  F  S  P  B  U  N  J  X  O  R  I  D  A  E  M  H  Z  L  W  K
+C || Q  E  W  B  M  I  K  S  Y  J  Z  N  T  D  H  V  A  X  U  G  O  P  C  L  F  R
+D || I  K  X  M  O  N  W  H  B  U  E  P  C  V  J  G  T  D  R  Z  S  A  Q  Y  L  F
+E || K  P  Z  J  V  X  C  H  R  L  D  Y  T  W  M  I  G  O  N  U  B  Q  F  S  A  E
+F || N  K  G  E  W  J  B  I  Z  Y  U  L  O  T  M  Q  S  P  R  V  C  H  X  D  A  F
+G || T  A  E  I  D  B  V  L  F  N  W  J  H  X  M  K  O  S  P  Z  G  R  Y  Q  C  U
+H || U  Y  D  V  G  A  Q  H  L  S  E  W  K  J  R  X  N  T  I  F  P  B  M  C  Z  O
+I || B  U  O  L  F  C  X  P  J  Y  T  I  Q  V  H  D  M  N  W  G  K  S  E  R  A  Z
+J || L  S  J  F  M  P  N  W  C  G  E  V  Z  B  A  K  R  U  I  Y  H  Q  D  T  O  X
+K || L  A  U  B  J  D  G  W  F  R  O  S  M  I  E  C  Y  Q  N  T  H  K  V  X  Z  P
+L || U  K  R  G  J  X  A  Z  H  P  F  V  M  S  T  Y  N  I  W  B  C  L  D  Q  E  O
+M || I  Q  G  L  A  D  R  Y  U  X  Z  C  M  N  V  T  H  J  S  E  K  O  W  B  P  F
+N || C  K  U  X  N  M  L  Y  R  O  F  W  D  G  I  Q  T  S  V  P  E  J  H  A  B  Z
+O || X  I  P  E  O  Z  Y  G  K  T  S  M  R  H  D  N  B  L  F  W  Q  A  C  J  U  V
+P || T  V  C  J  Z  X  Q  A  N  B  S  I  L  O  F  Y  E  D  G  M  K  R  W  H  U  P
+Q || I  U  O  Y  N  W  C  B  V  M  R  E  L  Z  T  P  Q  K  S  A  G  F  H  X  D  J
+R || L  H  B  J  C  V  P  R  Z  A  Y  G  F  X  N  T  S  W  Q  O  I  D  E  U  M  K
+S || M  C  R  I  K  Y  J  F  P  Z  W  N  L  H  U  O  D  B  S  V  T  Q  X  E  G  A
+T || L  Y  W  C  F  M  V  P  U  O  H  D  Q  B  J  S  N  R  X  K  T  A  G  E  Z  I
+U || N  S  L  J  X  A  Y  H  C  Q  W  B  O  G  Z  F  V  M  E  K  I  T  D  P  R  U
+V || Z  J  D  X  I  M  N  R  G  W  Q  E  Y  T  F  O  U  C  L  K  B  A  S  P  H  V
+W || I  P  S  F  O  Z  M  Q  X  T  J  N  U  R  D  K  V  A  Y  E  L  W  C  G  B  H
+X || I  G  C  Q  T  N  V  Y  R  A  K  Z  X  M  O  B  F  W  L  S  U  P  E  J  D  H
+Y || W  O  R  K  C  T  E  S  J  Z  L  A  F  P  H  Q  V  M  U  X  N  Y  B  D  I  G
+Z || R  J  E  W  B  G  O  N  P  T  F  Z  U  L  K  D  C  H  M  S  X  V  Q  Y  I  A
