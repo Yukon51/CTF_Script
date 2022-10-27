@@ -18,4 +18,6 @@ text = ""
 for i in data:
     if i := (dic.get(i, None)):
         text += i
-print(text)
+
+with open("binary.txt", "w") as f:
+    f.write(text)
