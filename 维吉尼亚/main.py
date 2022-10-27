@@ -20,7 +20,7 @@ def input_key():
     exit(-1)
 
 def input_table():
-    table = console.input("[bold red][+] 请输入标注表[/bold red][bold blue](回车则默认使用标准表): [/bold blue]")
+    table = console.input("[bold red][+] 请输入标准表[/bold red][bold blue](回车则默认使用标准表): [/bold blue]")
 
     if table == "": # 如果标准表为空返回None
         return None
@@ -30,7 +30,7 @@ def input_table():
     exit(-1)
 
 def input_tables():
-    tables = console.input("[bold red][+] 请输入26x26密码表[/bold red][bold blue](回车则默认使用标注密码表): [/bold blue]")
+    tables = console.input("[bold red][+] 请输入26x26密码表[/bold red][bold blue](回车则默认使用标准密码表): [/bold blue]")
     if tables == "":
         return None
     tables = [list(i) for i in tables.split(",")]
