@@ -1,34 +1,64 @@
-import argparse
+import os
+import win32con
+import win32clipboard
+from rich.table import Table
+from rich.console import Console
 
 
-parser = argparse.ArgumentParser()
-parser.add_argument('-t', type=str, default=None, required=True,
-                    help='输入十六进制文本')
-args  = parser.parse_args()
+console = Console()
+base_dir = os.path.dirname(os.path.abspath(__file__))
 
+def get_text():
+    win32clipboard.OpenClipboard()
+    d = win32clipboard.GetClipboardData(win32con.CF_TEXT)
+    win32clipboard.CloseClipboard()
+    return d.decode('GBK')
 
-def range_N(isPositiveInteger=None):
-    for i in range(256):
-        try:
-            flag = "".join(chr(int(j, 16) + i) for j in one_byte) if isPositiveInteger else "".join(chr(int(j, 16) - i) for j in one_byte)
-            print(f"[ +{i} ] --> {flag}") if isPositiveInteger else print(f"[ -{i} ] --> {flag}")
-        except ValueError:
-            print(f"[ 最多只能加到{i - 1}! ]\n") if isPositiveInteger else print(f"[ 最多只能减到{i - 1}! ]\n")
-            break
+def int2str(byte_list, is_add=True):
+    ret = []
+    if is_add:
+        for i in range(256):
+            add_text, flag = "", 0
+            for number in byte_list:
+                num = number+i
+                if 31 < num < 127:
+                    add_text += chr(num)
+                else:
+                    add_text += "~"
+                    flag = 1
+            ret.append([f"+{i}", add_text, flag])
+    else:
+        for i in range(1, 256):
+            add_text, flag = "", 0
+            for number in byte_list:
+                num = number-i
+                if 31 < num < 127:
+                    add_text += chr(num)
+                else:
+                    add_text += "~"
+                    flag = 1
+            ret.append([f"-{i}", add_text, flag])
+    return ret
 
+def show_table(ret, is_all=False):
+    table = Table(show_header=True, header_style="bold blue")
+    table.add_column("Offset", style="dim", width=6)
+    table.add_column("Text")
+    for data in ret:
+        if data[-1] == 0:
+            table.add_row(data[0], f"[bold red]{data[1]}[/]")
+        elif is_all:
+            table.add_row(data[0], f"{data[1]}")
+    console.print(table)
 
-one_byte = [args.t[i: i + 2] for i in range(0, len(args.t), 2)]
-flag = "".join(chr(int(i, 16)) for i in one_byte)
-print(f"\n[ 16进制 -> Ascii ]:\n{flag}\n")
+if __name__ == "__main__":
+    text = get_text()
+    byte_list = [int(text[i:i+2], 16) for i in range(0, len(text), 2)]
+    ret = int2str(byte_list, is_add=False)
+    ret.extend(int2str(byte_list, is_add=True))
 
-input_ = input("转换为10进制然后 - N, (N范围0~255)? (Y/n):")
-if input_ not in ["Y", "y", ""]:
-    exit()
-else:
-    range_N(isPositiveInteger=False)
-
-input_ = input("转换为10进制然后 + N, (N范围0~255)? (Y/n):")
-if input_ not in ["Y", "y", ""]:
-    exit()
-else:
-    range_N(isPositiveInteger=True)
+    console.print("Byxs20 Hex Tools:", style="bold blue")
+    show_table(ret, is_all=False)
+    if console.input("[bold blue]是否需要全部输出? [/]([bold red]y[/]/[bold green]N[/]): ") in ["Y", "y"]:
+        show_table(ret, is_all=True)
+    os.system("pause")
