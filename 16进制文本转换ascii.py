@@ -62,3 +62,4 @@ if __name__ == "__main__":
     if console.input("[bold blue]是否需要全部输出? [/]([bold red]y[/]/[bold green]N[/]): ") in ["Y", "y"]:
         show_table(ret, is_all=True)
     os.system("pause")
+    # c8e9aca0c3f4e6e5f2a1a0d4e8e5a0e6ece1e7a0e9f3baa0e6ece1e7fbf7e5e6e5efe9e4eae7efe5e4f3e6e9eff2f0e5e6e4e6e7e7e6e4f3e5fd

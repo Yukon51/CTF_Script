@@ -1,32 +1,32 @@
 密钥：THISISKEY
-密文：MWBJ{GFFNJXAIMX}
+密文：NNFC{GYCJEMUYNM}
 
 
      A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z
 ----------------------------------------------------------------------------------
-A || J  W  K  D  T  B  E  V  U  X  A  G  M  C  N  Y  R  S  I  Z  L  F  P  Q  O  H
-B || Y  C  T  V  Q  G  F  S  P  B  U  N  J  X  O  R  I  D  A  E  M  H  Z  L  W  K
-C || Q  E  W  B  M  I  K  S  Y  J  Z  N  T  D  H  V  A  X  U  G  O  P  C  L  F  R
-D || I  K  X  M  O  N  W  H  B  U  E  P  C  V  J  G  T  D  R  Z  S  A  Q  Y  L  F
-E || K  P  Z  J  V  X  C  H  R  L  D  Y  T  W  M  I  G  O  N  U  B  Q  F  S  A  E
-F || N  K  G  E  W  J  B  I  Z  Y  U  L  O  T  M  Q  S  P  R  V  C  H  X  D  A  F
-G || T  A  E  I  D  B  V  L  F  N  W  J  H  X  M  K  O  S  P  Z  G  R  Y  Q  C  U
-H || U  Y  D  V  G  A  Q  H  L  S  E  W  K  J  R  X  N  T  I  F  P  B  M  C  Z  O
-I || B  U  O  L  F  C  X  P  J  Y  T  I  Q  V  H  D  M  N  W  G  K  S  E  R  A  Z
-J || L  S  J  F  M  P  N  W  C  G  E  V  Z  B  A  K  R  U  I  Y  H  Q  D  T  O  X
-K || L  A  U  B  J  D  G  W  F  R  O  S  M  I  E  C  Y  Q  N  T  H  K  V  X  Z  P
-L || U  K  R  G  J  X  A  Z  H  P  F  V  M  S  T  Y  N  I  W  B  C  L  D  Q  E  O
-M || I  Q  G  L  A  D  R  Y  U  X  Z  C  M  N  V  T  H  J  S  E  K  O  W  B  P  F
-N || C  K  U  X  N  M  L  Y  R  O  F  W  D  G  I  Q  T  S  V  P  E  J  H  A  B  Z
-O || X  I  P  E  O  Z  Y  G  K  T  S  M  R  H  D  N  B  L  F  W  Q  A  C  J  U  V
-P || T  V  C  J  Z  X  Q  A  N  B  S  I  L  O  F  Y  E  D  G  M  K  R  W  H  U  P
-Q || I  U  O  Y  N  W  C  B  V  M  R  E  L  Z  T  P  Q  K  S  A  G  F  H  X  D  J
-R || L  H  B  J  C  V  P  R  Z  A  Y  G  F  X  N  T  S  W  Q  O  I  D  E  U  M  K
-S || M  C  R  I  K  Y  J  F  P  Z  W  N  L  H  U  O  D  B  S  V  T  Q  X  E  G  A
-T || L  Y  W  C  F  M  V  P  U  O  H  D  Q  B  J  S  N  R  X  K  T  A  G  E  Z  I
-U || N  S  L  J  X  A  Y  H  C  Q  W  B  O  G  Z  F  V  M  E  K  I  T  D  P  R  U
-V || Z  J  D  X  I  M  N  R  G  W  Q  E  Y  T  F  O  U  C  L  K  B  A  S  P  H  V
-W || I  P  S  F  O  Z  M  Q  X  T  J  N  U  R  D  K  V  A  Y  E  L  W  C  G  B  H
-X || I  G  C  Q  T  N  V  Y  R  A  K  Z  X  M  O  B  F  W  L  S  U  P  E  J  D  H
-Y || W  O  R  K  C  T  E  S  J  Z  L  A  F  P  H  Q  V  M  U  X  N  Y  B  D  I  G
-Z || R  J  E  W  B  G  O  N  P  T  F  Z  U  L  K  D  C  H  M  S  X  V  Q  Y  I  A
+A || S  E  D  G  P  A  H  V  M  T  W  B  L  C  U  K  X  J  Z  F  O  I  Q  N  R  Y
+B || B  G  O  F  K  W  N  L  E  C  J  D  Z  S  H  P  I  M  U  R  Q  A  T  Y  V  X
+C || N  I  R  L  G  H  E  F  S  D  M  X  A  P  O  V  K  C  B  W  Y  J  Z  T  U  Q
+D || Z  C  A  F  U  Q  P  M  L  B  G  I  Y  H  N  D  O  R  K  T  V  E  S  J  X  W
+E || B  S  W  Q  Z  C  V  O  X  H  M  K  F  U  A  R  N  L  J  D  P  E  T  G  Y  I
+F || A  H  N  B  V  D  W  Z  J  I  L  K  G  O  Q  F  M  C  U  E  Y  T  X  S  P  R
+G || I  O  N  Q  R  V  D  C  P  W  F  A  S  U  Y  L  G  Z  T  M  B  X  J  H  K  E
+H || R  P  E  G  V  U  Q  H  I  T  W  N  Z  M  B  F  L  X  Y  J  C  D  A  S  K  O
+I || F  Z  U  S  J  W  M  K  P  R  B  Y  I  C  L  E  N  H  O  G  A  T  Q  D  X  V
+J || I  J  R  K  T  C  S  A  H  L  Y  E  D  N  B  V  W  F  G  Z  U  Q  X  M  P  O
+K || K  Z  D  Q  U  N  M  B  C  V  A  E  J  P  I  H  S  R  X  L  W  F  T  G  Y  O
+L || Q  Z  N  O  B  H  T  F  A  M  J  P  W  R  L  D  S  C  V  E  G  K  Y  U  I  X
+M || T  Q  D  M  H  B  F  L  P  Z  A  X  S  G  E  U  W  N  Y  K  R  O  J  C  V  I
+N || F  G  T  X  S  Y  N  V  K  L  Q  H  J  I  B  P  O  C  W  Z  R  E  D  A  U  M
+O || D  E  C  R  A  T  Y  M  S  N  K  Q  X  V  W  J  U  F  O  P  I  L  H  B  G  Z
+P || I  B  K  F  H  A  W  T  G  O  U  J  D  C  V  X  L  Y  S  N  Q  P  R  M  E  Z
+Q || T  B  G  V  X  L  K  O  C  Y  Z  F  P  E  U  W  A  N  J  Q  I  M  H  S  R  D
+R || U  M  P  G  W  H  X  R  V  N  Z  I  L  E  K  T  C  F  Y  J  B  O  D  S  Q  A
+S || N  E  G  A  S  Q  C  Y  B  R  K  U  T  V  Z  I  H  L  P  F  O  D  M  X  W  J
+T || G  L  A  J  T  N  Z  X  W  H  O  U  C  Y  V  S  I  E  M  F  R  Q  K  B  P  D
+U || B  S  T  L  I  F  Z  W  O  V  P  J  U  Q  C  K  R  N  A  M  X  D  G  E  Y  H
+V || N  E  K  D  C  F  Z  Q  A  L  Y  P  G  B  M  U  I  W  O  V  J  S  T  R  X  H
+W || R  E  U  I  B  O  F  Z  L  S  Y  D  C  W  Q  H  T  X  V  A  P  M  G  J  K  N
+X || K  Y  I  F  O  X  S  A  P  U  T  E  D  B  L  R  C  J  Q  H  V  Z  N  G  M  W
+Y || Q  G  D  R  K  Y  V  I  E  T  M  A  C  B  P  S  Z  W  F  U  X  H  L  N  J  O
+Z || X  I  C  T  G  Z  L  Y  E  M  J  A  S  K  O  P  R  Q  U  V  D  N  W  F  H  B
