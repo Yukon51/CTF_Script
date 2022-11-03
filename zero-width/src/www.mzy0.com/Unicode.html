@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://www.mzy0.com/ctftools/zerowidth1/ -->
+<html lang="zh"><!--
+    Copyright (c) 2015 Kei Misawa
+
+    This software is released under the MIT License.
+
+    http://opensource.org/licenses/mit-license.php
+--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <title>Unicode Steganography with Zero-Width Characters</title>
+    <link rel="stylesheet" href="./Unicode Steganography with Zero-Width Characters_files/style.css">
+<style type="text/css">#_copy{align-items:center;background:#4494d5;border-radius:3px;color:#fff;cursor:pointer;display:flex;font-size:13px;height:30px;justify-content:center;position:absolute;width:60px;z-index:1000}#select-tooltip,#sfModal,.modal-backdrop,div[id^=reader-helper]{display:none!important}.modal-open{overflow:auto!important}._sf_adjust_body{padding-right:0!important}.super_copy_btns_div{position:fixed;width:154px;left:10px;top:45%;background:#e7f1ff;border:2px solid #4595d5;font-weight:600;border-radius:2px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;z-index:5000}.super_copy_btns_logo{width:100%;background:#4595d5;text-align:center;font-size:12px;color:#e7f1ff;line-height:30px;height:30px}.super_copy_btns_btn{display:block;width:128px;height:28px;background:#7f5711;border-radius:4px;color:#fff;font-size:12px;border:0;outline:0;margin:8px auto;font-weight:700;cursor:pointer;opacity:.9}.super_copy_btns_btn:hover{opacity:.8}.super_copy_btns_btn:active{opacity:1}</style></head>
+
+<body _c_t_common="1" class="vsc-initialized">
+    <h1>零宽度字符的Unicode隐写术</h1>
+    <div>
+        这是纯文本隐写术，带有Unicode的零宽度字符。<br> 零宽度字符插入文本中。<br>
+        <br> JavaScript库在下面。<br>
+        <a href="./Unicode Steganography with Zero-Width Characters_files/unicode_steganography.js.下载">http://330k.github.io/misc_tools/unicode_steganography.js</a>
+    </div>
+    <hr style="width: 100%;">
+    <h2>文本隐写术示例中的文本</h2>
+    <div class="steg_text">
+        <div class="box1">
+            <div class="input_text">
+                <div class="title">
+                    <div class="left">
+                        原文:
+                    </div>
+                    <div class="right"><span id="input_length_text">(长度: 90)</span></div>
+                    <div class="clear_text"><a id="input_clear_text">清除</a></div>
+                </div>
+
+                <textarea id="input_text" style="width: 100%; height: 90px;">The quick brown fox jumps over the lazy dog
+1234567890.:,;(*!?')
+いろはにほへと ちりぬるを
+色は匂へど 散りぬるを</textarea>
+            </div>
+            <div class="hidden_text">
+                <div class="title">
+                    <div class="left">
+                        隐藏文字:
+                    </div>
+                    <div class="right"><span id="hidden_length_text">(长度: 11)</span></div>
+                    <div class="clear_text"><a id="hidden_clear_text">清除</a></div>
+                </div>
+                <textarea id="hidden_text" style="width: 100%; height: 90px;">Where am I?</textarea>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="code_text">
+                <a id="encode_text">加密 »</a><br><br>
+                <a id="decode_text">« 解密</a></div>
+        </div>
+        <div class="box1">
+            <div>
+                <div class="title">
+                    <div class="left">
+                        隐写文本:
+                    </div>
+                    <div class="right"><span id="output_length_text">(长度: 0)</span></div>
+                    <div class="clear_text"><a id="output_clear_text">清除</a></div>
+                </div>
+
+                <textarea id="output_text" style="width: 100%; height: 230px;"></textarea><br>
+                <a id="download_stego_text_text" download="stego_text.txt">将Stego文本下载为文件</a>
+            </div>
+        </div>
+    </div>
+
+    <hr style="width: 100%;">
+    <div class="box3">
+        隐写术的零宽度字符：<br>
+        <div id="used_chars"><label><input type="checkbox" name="zerowidthcharacters" value=" ">U+200A ZERO WIDTH SPACE<br></label><label><input type="checkbox" name="zerowidthcharacters" value="​">U+200B ZERO WIDTH SPACE<br></label><label><input type="checkbox" name="zerowidthcharacters" value="‌">U+200C ZERO WIDTH NON-JOINER<br></label><label><input type="checkbox" name="zerowidthcharacters" value="‍">U+200D ZERO WIDTH JOINER<br></label><label><input type="checkbox" name="zerowidthcharacters" value="‎">U+200E LEFT-TO-RIGHT MARK<br></label><label><input type="checkbox" name="zerowidthcharacters" value="‏">U+200F LEFT-TO-RIGHT MARK<br></label><label><input type="checkbox" name="zerowidthcharacters" value="‪">U+202A LEFT-TO-RIGHT EMBEDDING<br></label><label><input type="checkbox" name="zerowidthcharacters" value="‬">U+202C POP DIRECTIONAL FORMATTING<br></label><label><input type="checkbox" name="zerowidthcharacters" value="‭">U+202D LEFT-TO-RIGHT OVERRIDE<br></label><label><input type="checkbox" name="zerowidthcharacters" value="⁢">U+2062 INVISIBLE TIMES<br></label><label><input type="checkbox" name="zerowidthcharacters" value="⁣">U+2063 INVISIBLE SEPARATOR<br></label><label><input type="checkbox" name="zerowidthcharacters" value="﻿">U+FEFF ZERO WIDTH NO-BREAK SPACE<br></label></div>
+    </div>
+
+    <hr style="width: 100%;">
+    <h2>文本隐写术示例中的二进制</h2>
+
+    <div class="steg_text">
+        <div class="box1">
+            <div>
+                <div class="title">
+                    <div class="left">
+                        原文:
+                    </div>
+                    <div class="right"><span id="input_length_binary">(长度: 90)</span></div>
+                    <div class="clear_text"><a id="input_clear_binary">清除</a></div>
+                </div>
+
+                <textarea id="input_binary" style="width: 100%; height: 150px;">The quick brown fox jumps over the lazy dog
+1234567890.:,;(*!?')
+いろはにほへと ちりぬるを
+色は匂へど 散りぬるを</textarea>
+            </div>
+            <div>
+                隐藏的数据 (请选择文件 &lt; 50kB):
+                <input id="input_from_file" type="file"><br><br>
+                <a id="download_hidden_data" download="hidden_data">下载解密后的隐藏数据（必须修改扩展名）
+                </a></div><a id="download_hidden_data" download="hidden_data"> 
+            </a></div><a id="download_hidden_data" download="hidden_data">
+
+            </a><div class="box2"><a id="download_hidden_data" download="hidden_data">
+                </a><div class="code_text"><a id="download_hidden_data" download="hidden_data">
+                    </a><a id="encode_binary">加密 »</a><br><br>
+                <a id="decode_binary">« 解密</a>
+            </div>
+        </div>
+
+        <div class="box1">
+            <div>
+                <div class="title">
+                    <div class="left">
+                        隐写文字:
+                    </div>
+                    <div class="right"><span id="output_length_binary">(长度: 0)</span></div>
+                    <div class="clear_text"><a id="output_clear_binary">清除</a></div>
+                </div>
+                <textarea id="output_binary" style="width: 100%; height: 230px;"></textarea><br>
+                <a id="download_stego_text_binary" download="stego_text.txt">下载隐写后文本到文件</a>
+            </div>
+        </div>
+    </div>
+
+
+    <hr style="width: 100%;">
+    <h2>使用说明</h2>
+    <h3><code>unicodeSteganographer.encodeText(String, String)</code></h3>
+    <div>
+        <code>encodeSteganography</code> returns a stego String. The 1st argument is a String to be embedded, the 2nd argument is a String to be hidden.
+    </div>
+    <h3><code>unicodeSteganographer.encodeBinary(String, Uint8Array)</code></h3>
+    <div>
+        <code>encodeSteganography</code> returns a stego String which is embedded steganography of Uint8Array.
+    </div>
+    <h3><code>unicodeSteganographer.decodeText(String)</code></h3>
+    <div>
+        <code>decodeSteganography</code> returns a JavaScript Object: { originalText: original text (String), hiddenText: hidden text (String)}.
+    </div>
+    <h3><code>unicodeSteganographer.decodeBinary(String)</code></h3>
+    <div>
+        <code>decodeSteganography</code> returns a JavaScript Object: { originalText: original text (String), hiddenData: hidden data (Uint8Array)}.
+    </div>
+    <h3><code>unicodeSteganographer.setUseChars(String)</code></h3>
+    <div>
+        <code>setUseChars</code> sets the characters for steganography as a String.<br> Default characters used for steganography are U+200C, U+200D, U+202C, and U+FEFF.<br> U+200B(ZERO WIDTH SPACE) is deleted in Gmail when sending a mail from browsers.
+        <br>
+        <br>
+        <h2>支持的浏览器</h2>
+        <ul>
+            <li>Chromium 45 (Ubuntu 14.04 LTS)</li>
+            <li>Firefox 42 (Ubuntu 14.04 LTS)</li>
+            <li>Edge (Windows 10)</li>
+            <li>Internet Explorer 11 (Windows 10) * 仅文本格式，无法下载为文件</li>
+            <li>Safari (iOS 9.1)</li>
+            <li>Chrome (Android 4.2)</li>
+        </ul>
+    </div>
+
+    <script type="text/javascript" src="./Unicode Steganography with Zero-Width Characters_files/unicode_steganography.js.下载"></script>
+    <script>
+        'use strict';
+
+        // Encode/Decode Buttons
+        document.getElementById('encode_text').addEventListener('click', function() {
+            var text1 = document.getElementById('input_text').value;
+            var text2 = document.getElementById('hidden_text').value;
+            var stego = unicodeSteganographer.encodeText(text1, text2);
+
+            document.getElementById('output_text').value = stego;
+            var b = new Blob([stego], {
+                type: 'text/plain'
+            });
+            var bURL = URL.createObjectURL(b);
+            document.getElementById('download_stego_text_text').href = bURL;
+        });
+        document.getElementById('decode_text').addEventListener('click', function() {
+            var text1 = document.getElementById('output_text').value;
+            var result = unicodeSteganographer.decodeText(text1);
+            document.getElementById('input_text').value = result.originalText;
+            document.getElementById('hidden_text').value = result.hiddenText;
+        });
+        document.getElementById('encode_binary').addEventListener('click', function() {
+            var text1 = document.getElementById('input_binary').value;
+            var reader = new FileReader();
+
+            var blob;
+            if (typeof document.getElementById('input_from_file').files[0] !== 'undefined') {
+                blob = document.getElementById('input_from_file').files[0];
+            } else {
+                alert('请选择一个需要隐藏的文件');
+                return false;
+            }
+
+            reader.onload = function() {
+                var stego = unicodeSteganographer.encodeBinary(text1, new Uint8Array(reader.result));
+                var b = new Blob([stego], {
+                    type: 'text/plain'
+                });
+                var bURL = URL.createObjectURL(b);
+                document.getElementById('download_stego_text_binary').href = bURL;
+
+                if (stego.length < 1000000) {
+                    document.getElementById('output_binary').value = stego;
+                } else {
+                    document.getElementById('output_binary').value = '隐写文本太长了. 请下载为文本文件. (' + b.size + ' bytes)';
+                }
+            };
+            reader.readAsArrayBuffer(blob);
+        });
+        document.getElementById('decode_binary').addEventListener('click', function() {
+            var text1 = document.getElementById('output_binary').value;
+            var result = unicodeSteganographer.decodeBinary(text1);
+
+            document.getElementById('input_binary').value = result.originalText;
+
+            var blob = new Blob([result.hiddenData], {
+                type: 'application/octet-binary'
+            });
+            var blobURL = URL.createObjectURL(blob);
+            document.getElementById('download_hidden_data').href = blobURL;
+        });
+
+        // Clear Buttons
+        document.getElementById('input_clear_text').addEventListener('click', function() {
+            document.getElementById('input_text').value = '';
+        });
+        document.getElementById('hidden_clear_text').addEventListener('click', function() {
+            document.getElementById('hidden_text').value = '';
+        });
+        document.getElementById('output_clear_text').addEventListener('click', function() {
+            document.getElementById('output_text').value = '';
+            document.getElementById('download_stego_text_text').removeAttribute('href');
+        });
+        document.getElementById('input_clear_binary').addEventListener('click', function() {
+            document.getElementById('input_binary').value = '';
+        });
+        document.getElementById('output_clear_binary').addEventListener('click', function() {
+            document.getElementById('output_binary').value = '';
+            document.getElementById('download_stego_text_binary').removeAttribute('href');
+        });
+
+        // Zero-Width Characters Selection
+        var chars = [
+            //  {'char':'\u034f', 'checked':false, 'name': 'COMBINING GRAPHEME JOINER'},
+            {
+                'char': '\u200a',
+                'checked': false,
+                'name': 'ZERO WIDTH SPACE'
+            }, {
+                'char': '\u200b',
+                'checked': false,
+                'name': 'ZERO WIDTH SPACE'
+            }, {
+                'char': '\u200c',
+                'checked': true,
+                'name': 'ZERO WIDTH NON-JOINER'
+            }, {
+                'char': '\u200d',
+                'checked': true,
+                'name': 'ZERO WIDTH JOINER'
+            }, {
+                'char': '\u200e',
+                'checked': false,
+                'name': 'LEFT-TO-RIGHT MARK'
+            }, {
+                'char': '\u200f',
+                'checked': false,
+                'name': 'LEFT-TO-RIGHT MARK'
+            },
+            //  {'char':'\u2028', 'checked':false, 'name': 'LINE SEPARATOR'},
+            //  {'char':'\u2029', 'checked':false, 'name': 'PARAGRAPH SEPARATOR'},
+            {
+                'char': '\u202a',
+                'checked': false,
+                'name': 'LEFT-TO-RIGHT EMBEDDING'
+            }, {
+                'char': '\u202c',
+                'checked': true,
+                'name': 'POP DIRECTIONAL FORMATTING'
+            }, {
+                'char': '\u202d',
+                'checked': false,
+                'name': 'LEFT-TO-RIGHT OVERRIDE'
+            },
+            //  {'char':'\u2061', 'checked':false, 'name': 'FUNCTION APPLICATION'},
+            {
+                'char': '\u2062',
+                'checked': false,
+                'name': 'INVISIBLE TIMES'
+            }, {
+                'char': '\u2063',
+                'checked': false,
+                'name': 'INVISIBLE SEPARATOR'
+            }, {
+                'char': '\ufeff',
+                'checked': true,
+                'name': 'ZERO WIDTH NO-BREAK SPACE'
+            }
+        ];
+        var changeCheckbox = function() {
+            var input = document.getElementsByTagName('input');
+            var chars = '';
+            for (var j = 0; j < input.length; j++) {
+                if ((input[j].type == 'checkbox') && (input[j].name == 'zerowidthcharacters') && (input[j].checked != false)) {
+                    chars += input[j].value;
+                }
+            }
+            unicodeSteganographer.setUseChars(chars);
+        };
+        for (var i = 0; i < chars.length; i++) {
+            var e1 = document.createElement('label');
+            var e2 = document.createElement('input');
+            var e3 = document.createTextNode('U+' + ('000' + chars[i].char.charCodeAt(0).toString(16).toUpperCase()).slice(-4) + ' ' + chars[i].name);
+            var e4 = document.createElement('br');
+
+            e2.type = 'checkbox';
+            e2.name = 'zerowidthcharacters';
+            e2.value = chars[i].char;
+            e2.checked = chars[i].checked;
+            e2.addEventListener('change', changeCheckbox);
+
+            e1.appendChild(e2);
+            e1.appendChild(e3);
+            e1.appendChild(e4);
+
+            document.getElementById('used_chars').appendChild(e1);
+        }
+
+        // Watch Text Length
+        window.setInterval(function() {
+            document.getElementById('input_length_text').innerText = '(长度: ' + document.getElementById('input_text').value.length + ')';
+            document.getElementById('hidden_length_text').innerText = '(长度: ' + document.getElementById('hidden_text').value.length + ')';
+            document.getElementById('output_length_text').innerText = '(长度: ' + document.getElementById('output_text').value.length + ')';
+            document.getElementById('input_length_binary').innerText = '(长度: ' + document.getElementById('input_binary').value.length + ')';
+            document.getElementById('output_length_binary').innerText = '(长度: ' + document.getElementById('output_binary').value.length + ')';
+        }, 100);
+    </script>
+
+
+
+</body></html>

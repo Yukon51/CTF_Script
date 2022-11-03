@@ -1,0 +1,148 @@
+/*全局广告样式Start*/
+#globalAd {
+	/* width: 320px; */
+	/* height: 370px; */
+	width: 330px;
+	height: 300px;
+	overflow: hidden;
+	position: fixed;
+	display: none;
+	margin: 0 auto;
+	z-index: 10001;
+}
+
+.layer {
+	width: 100%;
+	height: 100%;
+	position:fixed;
+	top: 0px;
+	left: 0px;
+	filter: alpha(opacity=50);
+	opacity: 0.6;
+	background: #000;
+	z-index: 1000;
+	display: none;
+}
+
+.globalContent {
+	width: 320px;
+	height: 370px;
+}
+
+.globalContent img {
+	max-width: 320px;
+	/* height: 370px; */
+}
+
+.closeIco {
+	width: 350px;
+	height: 50px;
+	margin-left: -6px;
+    margin-top: -6px;
+	position: absolute;
+	/* left: 290px; */
+	cursor: pointer;
+	background: url("../Images/close-48-48.png") no-repeat scroll 260px 0;
+	z-index: 99;
+}
+
+.mmredbox_cover {
+	font-size:1em;
+	white-space:normal;
+	line-height:150%;
+	text-align:center;
+	color:#fff;
+	padding: 24px;
+	border-radius: 9px;
+	margin:0 auto;
+	border:none;
+	display:block;
+	max-width:none;
+	max-height:none;
+	box-sizing:content-box;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	text-decoration:none;
+	width:15em;
+	height:19.2em;
+	position:relative
+}
+
+.mmredbox_cover_img {
+	font-size:1em;white-space:normal;line-height:150%;;text-align:center;color:#fff;padding:0;margin:0;border:none;display:block;max-width:none;max-height:none;box-sizing:content-box;-webkit-tap-highlight-color:rgba(0,0,0,0);text-decoration:none;width:100%;height:100%
+}
+
+.mmredbox_cover_logo {
+	font-size:1em;white-space:normal;line-height:150%;;text-align:center;color:#fff;padding:0;margin:0;border:none;display:block;max-width:none;max-height:none;box-sizing:content-box;-webkit-tap-highlight-color:rgba(0,0,0,0);text-decoration:none;width:2.8em;position:absolute;left:50%;margin-left:-1.4em;top:6em
+}
+
+.mmredbox_cover_title {
+	font-size:1em;
+	white-space:normal;
+	line-height:150%;
+	text-align:center;
+	color:#fff;
+	padding:0 0.8em;
+	margin:0;
+	border:none;
+	display:block;
+	max-width:none;
+	max-height:none;
+	box-sizing:content-box;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	text-decoration:none;
+	position:absolute;
+	width:100%;
+	left:0em;
+	text-align:center;
+	/* top:11.2em; 
+	font-size:1em;*/
+	top: 6em;
+	font-size: 1.2em;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	text-shadow:0 -0.09em 0.1em rgba(189, 31, 93, .8);
+	font-weight:600
+}
+
+.mmredbox_cover_desc {
+	font-size:1em;
+	white-space:normal;
+	line-height:150%;
+	text-align:center;
+	color:#FFD976;
+	padding:0;
+	margin:0;
+	border:none;
+	display:block;
+	max-width:none;
+	max-height:none;
+	box-sizing:content-box;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	text-decoration:none;
+	position:absolute;
+	width:100%;
+	left:0em;
+	text-align:center;
+	/* font-size:0.88em;
+	top:14.6em; 
+	font-weight:500;*/
+	font-size:0.88em;
+	top: 10.2em;
+	font-weight:600;
+	text-shadow:0 -0.09em 0.1em rgba(189, 31, 93, .8)
+}
+
+.mmredbox_cover_btn {
+	font-size:1em;white-space:normal;line-height:150%;;text-align:center;color:#fff;padding:0;margin:0;border:none;display:block;max-width:none;max-height:none;box-sizing:content-box;-webkit-tap-highlight-color:rgba(0,0,0,0);text-decoration:none;position:absolute;cursor:pointer;width:7.12em;height:2em;left:50%;margin-left:-3.56em;bottom:1.6em
+}
+
+.mmredbox_cover_btn_img {
+	font-size:1em;white-space:normal;line-height:150%;;text-align:center;color:#fff;padding:0;margin:0;border:none;display:block;max-width:none;max-height:none;box-sizing:content-box;-webkit-tap-highlight-color:rgba(0,0,0,0);text-decoration:none;width:100%;height:100%
+}
+
+.mmredbox_cover_btn_img_text {
+	font-size:1em;white-space:normal;line-height:150%;;text-align:center;color:#fff;padding:0;margin:0;border:none;display:block;max-width:none;max-height:none;box-sizing:content-box;-webkit-tap-highlight-color:rgba(0,0,0,0);text-decoration:none;font-size:0.8em;position:absolute;top:.2em;left:-0.3em;width:100%;text-align:center;font-weight:600
+}
+/*全局广告样式End*/decoration:none;font-size:0.8em;position:absolute;top:.2em;left:-0.3em;width:100%;text-align:center;font-weight:600
+}
+/*全局广告样式End*/

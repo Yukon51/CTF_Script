@@ -1,0 +1,126 @@
+body {
+    background-color: #071a2c;
+    font-family: system-ui;
+}
+
+body,
+h1,
+h2 {
+    color: white;
+    text-align: center;
+    width: 900px;
+    margin: 0 auto;
+}
+a{color:white;}
+a:visited {
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+hr {
+    margin-top: 10px;
+}
+
+.steg_text {
+    width: 900px;
+    margin: 0 auto;
+    height: 340px;
+}
+
+.box3 {
+    text-align: left;
+    margin: 0 auto;
+    width: 400px;
+}
+
+.box1 {
+    float: left;
+    background-color: #0a2a4a;
+    padding: 20px;
+    border-radius: 10px;
+    height: 300px;
+    width: 38%;
+}
+
+.box2 {
+    position: relative;
+    float: left;
+    height: 340px;
+    width: 14%;
+    margin: 0 auto;
+}
+
+.code_text {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.clear_text a {
+    display: inline-block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    width: 100px;
+    border-radius: 30px;
+    border-color: #f08;
+    background-color: #f08;
+}
+
+.left {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+
+.clear_text {
+    text-align: center;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.right {
+    float: right;
+    height: 40px;
+    line-height: 40px;
+}
+
+.input_text {
+    margin-bottom: 10px;
+}
+
+#encode_text,
+#decode_text,
+#encode_binary,
+#decode_binary {
+    display: inline-block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    width: 100px;
+    border-color: #f08;
+    background-color: #f08;
+}
+
+#encode_text,
+#encode_binary {
+    border-radius: 10px 30px 30px 10px;
+}
+
+#decode_text,
+#decode_binary {
+    border-radius: 30px 10px 10px 30px;
+}

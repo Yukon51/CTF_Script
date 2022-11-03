@@ -1,0 +1,707 @@
+﻿
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="一个工具箱, 一个在线工具箱, 在线工具箱, 免费在线工具, 好用的在线工具, 好工具网" />
+	<meta name="description" content="一个工具箱网站致力于为您打造一个好用便捷的在线工具箱，无需注册和下载安装即可免费使用各种在线工具，囊括了视频音频、加密解密、文字编辑、编程开发、单位换算、日期时间、图形图像、金融服务、日常生活、查询服务等诸多种类的在线工具。" />
+    <meta name="author" content="">
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="bookmark" href="/favicon.ico"/>
+	<link rel="apple-touch-icon" sizes="76x76" href="./images/icons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="./images/icons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="./images/icons/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-touch-icon-180x180.png" />
+	<link rel="apple-touch-icon" sizes="58x58" href="./images/icons/android-touch-icon.png" />
+		
+    <title>一个工具箱 - 好用的在线工具都在这里！</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./CSS/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="./CSS/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+	<link href="./CSS/owl.carousel.min.css" rel="stylesheet">
+	<link href="./CSS/owl.theme.default.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+	<link href="./CSS/index.css" rel="stylesheet">
+	<link href="./CSS/ad.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1979015608814436"
+	     crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  <a class="navbar-brand" href="./" title="一个工具箱 - 好用的在线工具都在这里！">
+			<span id="site-icon"><img src="./Images/Icons/site-icon-76x76.png" /></span>
+            <span id="site-title">一个工具箱 - 好用的在线工具都在这里！</span>
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" style="max-height: 448px;">
+          <ul class="nav navbar-nav navbar-right sidebar-top">
+                        <li style="width: 50%; float: left;">
+              <a href="./Category.php?Id=34" title="视频音频在线工具">
+                <span class="glyphicon glyphicon-film menu-icon"></span>视频音频
+              </a>
+            </li>
+			            <li style="width: 50%; float: left;">
+              <a href="./Category.php?Id=32" title="图形图像在线工具">
+                <span class="glyphicon glyphicon-picture menu-icon"></span>图形图像
+              </a>
+            </li>
+			            <li style="width: 50%; float: left;">
+              <a href="./Category.php?Id=30" title="日期时间在线工具">
+                <span class="glyphicon glyphicon-calendar menu-icon"></span>日期时间
+              </a>
+            </li>
+			            <li style="width: 50%; float: left;">
+              <a href="./Category.php?Id=28" title="文字编辑在线工具">
+                <span class="glyphicon glyphicon-text-size menu-icon"></span>文字编辑
+              </a>
+            </li>
+			            <li style="width: 50%; float: left;">
+              <a href="./Category.php?Id=27" title="加密解密在线工具">
+                <span class="glyphicon glyphicon-lock menu-icon"></span>加密解密
+              </a>
+            </li>
+			            <li style="width: 50%; float: left;">
+              <a href="./Category.php?Id=29" title="编程开发在线工具">
+                <span class="glyphicon glyphicon-console menu-icon"></span>编程开发
+              </a>
+            </li>
+			            <li style="width: 50%; float: left;">
+              <a href="./Category.php?Id=33" title="计算换算在线工具">
+                <span class="glyphicon glyphicon-transfer menu-icon"></span>计算换算
+              </a>
+            </li>
+			            <li style="width: 50%; float: left;">
+              <a href="./Category.php?Id=23" title="金融理财在线工具">
+                <span class="glyphicon glyphicon-piggy-bank menu-icon"></span>金融理财
+              </a>
+            </li>
+			            <li style="width: 50%; float: left;">
+              <a href="./Category.php?Id=31" title="生活日常在线工具">
+                <span class="glyphicon glyphicon-qrcode menu-icon"></span>生活日常
+              </a>
+            </li>
+						<li style="width: 50%; float: left;"><a>&nbsp;</a></li>
+			<li style="width: 50%; float: left;"><a href="./Ranking.php" ><span class="glyphicon glyphicon-flag menu-icon"></span>榜单</a></li>
+			<li style="width: 50%; float: left;"><a href="./VipApps.php" ><span class="glyphicon glyphicon-heart menu-icon"></span>专享</a></li>
+			<li style="width: 50%; float: left;"><a href="./Vip.php" ><span class="glyphicon glyphicon-user menu-icon"></span>登陆</a></li>
+			<li style="width: 50%; float: left;"><a href="./En/Index.php" ><span class="glyphicon glyphicon-globe menu-icon"></span>EN</a></li>
+            <li style="width: 100%; float: left;"><a href="./Timeline.php" target="_blank"><span class="glyphicon glyphicon-object-align-bottom menu-icon"></span>本站已有408个在线工具</a></li>
+            <li style="width: 100%; float: left;"><a><span class="glyphicon glyphicon-star menu-icon"></span>累计已被使用20140367次</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+			<a href="./En/Index.php" type="button" class="navbar-button">
+				<span class="glyphicon glyphicon-globe menu-icon"></span> EN
+			</a>
+			<a href="./Vip.php" type="button" class="navbar-button">
+				<span class="glyphicon glyphicon-user menu-icon"></span> 登陆
+			</a>
+            <div class="input-group">
+              <input id="txtSearch" type="text" class="form-control" placeholder="输入关键词搜索工具...">
+              <span class="input-group-btn">
+                <button id="btnSearch" class="btn btn-default" type="button">搜索</button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          	<ul class="nav nav-sidebar" style="margin-bottom: 0px;">
+            	<li class="active"><a href="./"><span class="glyphicon glyphicon-home menu-icon"></span>推荐热门</a></li>
+				<li><a href="./Ranking.php" ><span class="glyphicon glyphicon-flag menu-icon"></span>工具榜单</a></li>
+				<li><a href="./VipApps.php" ><span class="glyphicon glyphicon-heart menu-icon"></span>专享工具</a></li>
+								<li>
+					<a href="./Category.php?Id=34" title="视频音频在线工具">
+						<span class="glyphicon glyphicon-film menu-icon"></span>视频音频
+					</a>
+				</li>
+								<li>
+					<a href="./Category.php?Id=32" title="图形图像在线工具">
+						<span class="glyphicon glyphicon-picture menu-icon"></span>图形图像
+					</a>
+				</li>
+								<li>
+					<a href="./Category.php?Id=30" title="日期时间在线工具">
+						<span class="glyphicon glyphicon-calendar menu-icon"></span>日期时间
+					</a>
+				</li>
+								<li>
+					<a href="./Category.php?Id=28" title="文字编辑在线工具">
+						<span class="glyphicon glyphicon-text-size menu-icon"></span>文字编辑
+					</a>
+				</li>
+								<li>
+					<a href="./Category.php?Id=27" title="加密解密在线工具">
+						<span class="glyphicon glyphicon-lock menu-icon"></span>加密解密
+					</a>
+				</li>
+								<li>
+					<a href="./Category.php?Id=29" title="编程开发在线工具">
+						<span class="glyphicon glyphicon-console menu-icon"></span>编程开发
+					</a>
+				</li>
+								<li>
+					<a href="./Category.php?Id=33" title="计算换算在线工具">
+						<span class="glyphicon glyphicon-transfer menu-icon"></span>计算换算
+					</a>
+				</li>
+								<li>
+					<a href="./Category.php?Id=23" title="金融理财在线工具">
+						<span class="glyphicon glyphicon-piggy-bank menu-icon"></span>金融理财
+					</a>
+				</li>
+								<li>
+					<a href="./Category.php?Id=31" title="生活日常在线工具">
+						<span class="glyphicon glyphicon-qrcode menu-icon"></span>生活日常
+					</a>
+				</li>
+							</ul>
+			<ul class="nav nav-sidebar" style="position: absolute; bottom: 0; margin-bottom: 0px;">
+				<li>
+					<a href="./Timeline.php" target="_blank">
+						<span class="glyphicon glyphicon-object-align-bottom menu-icon"></span>本站已有408个在线工具
+					</a>
+				</li>
+				<li><a><span class="glyphicon glyphicon-star menu-icon"></span>累计已被使用20140367次</a></li>
+			</ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+						<h1 class="page-header">推荐</h1>
+			<!-- Start -->
+			<div class="row placeholders">
+				<!-- AD Start -->
+									<!-- <div class="col-xs-3 col-sm-2 placeholder placeholder-ad placeholder-ad-a">
+						<a href="#" onclick="Bind_Download('ios')" rel="nofollow">
+							<img src="./UploadFiles/20210710/KUA202107101955080_s.png" width="96" height="96" class="img-responsive">
+						</a>
+						<a href="#" onclick="Bind_Download('ios')" rel="nofollow">
+							<h4>一个小工具箱 iOS版App下载</h4>
+						</a>
+					</div> -->
+					 
+					<div class="col-xs-3 col-sm-2 placeholder placeholder-ad placeholder-ad-a">
+						<a href="https://s.click.taobao.com/ULYC4Su" target="_blank" rel="nofollow">
+							<img src="../UploadFiles/20221025/KUA202210251040030_s.jpeg" width="96" height="96" class="img-responsive">
+						</a>
+						<a href="https://s.click.taobao.com/ULYC4Su" target="_blank" rel="nofollow">
+							<h4>天猫双11 超级红包 等你来领！</h4>
+						</a>
+					</div>
+													<!-- AD End -->
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-vip">
+					<a href="./Tool.php?Id=775" title="GIF动态图制作">
+													<img src="../UploadFiles/20190420/KUA201904201232280.png" width="96" height="96" class="img-responsive" alt="在线GIF动态图制作工具，可以将多张静态图片组合成GIF动态图片，同时可以在图片中添加字幕文字，完全可以自己制作属于自己的表情GIF动态包。">
+											</a>
+					<a href="./Tool.php?Id=775" title="GIF动态图制作">
+						<h4>GIF动态图制作</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-vip">
+					<a href="./Tool.php?Id=735" title="图片文字识别">
+													<img src="../UploadFiles/20190120/KUA201901201521100.png" width="96" height="96" class="img-responsive" alt="在线图片文字识别工具（在线图片转文字工具、在线OCR图片文字识别工具），可以把图片中文字转换成文本，支持中文、繁体中文、日语、韩语、英语、法语、俄语、德语等多种语言。">
+											</a>
+					<a href="./Tool.php?Id=735" title="图片文字识别">
+						<h4>图片文字识别</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder ">
+					<a href="./Tool.php?Id=1051" title="人生格子">
+													<img src="../UploadFiles/20220907/KUA202209071112290.png" width="96" height="96" class="img-responsive" alt="人生小格生成器">
+											</a>
+					<a href="./Tool.php?Id=1051" title="人生格子">
+						<h4>人生格子</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder ">
+					<a href="./Tool.php?Id=1046" title="XPath解析器">
+													<img src="../UploadFiles/20220823/KUA202208232135500.png" width="96" height="96" class="img-responsive" alt="免费在线XPath解析器，基于XML的树状结构，提供在数据结构树中找寻节点的能力">
+											</a>
+					<a href="./Tool.php?Id=1046" title="XPath解析器">
+						<h4>XPath解析器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder ">
+					<a href="./Tool.php?Id=812" title="体脂率（BFR）计算器">
+													<img src="../UploadFiles/20190826/KUA201908262036360.png" width="96" height="96" class="img-responsive" alt="体脂率（BFR）计算器，根据你的体重和腰围等计算你的体脂率。体脂率是指人体内脂肪重量在人体总体重中所占的比例，又称体脂百分数，它反映人体内脂肪含量的多少。肥胖会提高罹患各种疾病的风险。">
+											</a>
+					<a href="./Tool.php?Id=812" title="体脂率（BFR）计算器">
+						<h4>体脂率（BFR）计算器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder ">
+					<a href="./Tool.php?Id=978" title="图片拼接">
+													<img src="../UploadFiles/20200919/KUA202009191050470.png" width="96" height="96" class="img-responsive" alt="图片拼接——在线快速拼接多个图片成长图。图片拼接工具可以在线将多张图片按照竖向上下垂直或者横向左右并排方向或N行N列宫格形式无缝拼接为一张长图片。">
+											</a>
+					<a href="./Tool.php?Id=978" title="图片拼接">
+						<h4>图片拼接</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder ">
+					<a href="./Tool.php?Id=1014" title="对称图像生成器">
+													<img src="../UploadFiles/20210221/KUA202102211955540.png" width="96" height="96" class="img-responsive" alt="">
+											</a>
+					<a href="./Tool.php?Id=1014" title="对称图像生成器">
+						<h4>对称图像生成器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-vip">
+					<a href="./Tool.php?Id=789" title="举牌小人生成器">
+													<img src="../UploadFiles/20190529/KUA201905292125130.png" width="96" height="96" class="img-responsive" alt="在线举牌小人生成器是一个可在线生成小人举牌加油、告白等有趣图片的在线小工具。
+举牌是一种支持的态度，是一种相信希望的精神，每只可爱的小人都代表着支持你的人，鼓舞着你。举牌世界没有人是孤独的，有时你需要独自面对眼前的难关，举牌小人会陪伴与鼓励你，用举牌挺你走向希望。我们相信有许多美好的事都等着我们高举着，并将这样的精神与鼓励不断地蔓延下去。">
+											</a>
+					<a href="./Tool.php?Id=789" title="举牌小人生成器">
+						<h4>举牌小人生成器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder ">
+					<a href="./Tool.php?Id=1033" title="缩写词翻译器">
+													<img src="../UploadFiles/20211002/KUA202110022110100.png" width="96" height="96" class="img-responsive" alt="缩写词翻译器能够直接翻译目前最火爆的网络用语拼音缩写，相信很多朋友面对这些缩写（例如yyds）都会一头雾水，尤其是专业圈子更是摸不着头脑，此工具实时的更新词库，让您能够正常的进行网络阅读和交流，十分好用！">
+											</a>
+					<a href="./Tool.php?Id=1033" title="缩写词翻译器">
+						<h4>缩写词翻译器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-vip">
+					<a href="./Tool.php?Id=999" title="组合图生成器">
+													<img src="../UploadFiles/20210101/KUA202101011931230.png" width="96" height="96" class="img-responsive" alt="组合图表生成器，在线制作标准的柱状图和折线图组合图表，帮助你快速创建个性化的柱状图和折线图组合图表。">
+											</a>
+					<a href="./Tool.php?Id=999" title="组合图生成器">
+						<h4>组合图生成器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-vip">
+					<a href="./Tool.php?Id=882" title="点阵字生成器">
+													<img src="../UploadFiles/20200201/KUA202002011730050.png" width="96" height="96" class="img-responsive" alt="点阵字生成器，用于模拟ＬＥＤ点阵显示屏的效果。生成点阵字的效果显示支持文本模式，可在微信对话/微信朋友圈/微博/今日头条等社交媒体中直接粘贴；同时支持生成HTML格式的文本，可以在网页、富文本编辑器中都可以直接粘贴。">
+											</a>
+					<a href="./Tool.php?Id=882" title="点阵字生成器">
+						<h4>点阵字生成器</h4>
+					</a>
+				</div>
+							</div>
+			<!-- End -->
+			<!-- Ad Start -->
+			<!--  -->
+			<!-- End -->
+			<h1 class="page-header">热门</h1>
+			<!-- Start -->
+			<div class="row placeholders">
+				<!-- AD Start -->
+																	<!-- AD End -->
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-hot">
+					<a href="./Tool.php?Id=853" title="狗屁不通文章生成器">
+													<img src="../UploadFiles/20191121/KUA201911212002350.png" width="96" height="96" class="img-responsive" alt="狗屁不通文章生成器，就是你随便输入一个主题，然后这个生成器可以根据你输入主题的文字，生成一篇文章。当然了，这个狗屁不通文章生成器，现在还不太智能，之所以火了，就是因为它不算太智能（因为作者应该不太懂神经网络算法，所以没有加入任何自然语言处理的算法），生成的文章都啰里啰嗦，内容重复，乱七八糟，所以大家感觉好玩就火了。">
+											</a>
+					<a href="./Tool.php?Id=853" title="狗屁不通文章生成器">
+						<h4>狗屁不通文章生成器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-hot">
+					<a href="./Tool.php?Id=823" title="商品保质期计算器">
+													<img src="../UploadFiles/20190921/KUA201909212145050.png" width="96" height="96" class="img-responsive" alt="如何计算商品是否已经过保质期？本工具可以根据商品的生产日期和保质期限计算算品是否已过保质期。">
+											</a>
+					<a href="./Tool.php?Id=823" title="商品保质期计算器">
+						<h4>商品保质期计算器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-hot">
+					<a href="./Tool.php?Id=673" title="倒数日">
+													<img src="../UploadFiles/20181201/KUA201812011555290.png" width="96" height="96" class="img-responsive" alt="在线倒数日工具可以帮您计算并记录一些重要的事件和日期距今的天数,不让您错过任何一个重要的事件和日期。">
+											</a>
+					<a href="./Tool.php?Id=673" title="倒数日">
+						<h4>倒数日</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-hot">
+					<a href="./Tool.php?Id=812" title="体脂率（BFR）计算器">
+													<img src="../UploadFiles/20190826/KUA201908262036360.png" width="96" height="96" class="img-responsive" alt="体脂率（BFR）计算器，根据你的体重和腰围等计算你的体脂率。体脂率是指人体内脂肪重量在人体总体重中所占的比例，又称体脂百分数，它反映人体内脂肪含量的多少。肥胖会提高罹患各种疾病的风险。">
+											</a>
+					<a href="./Tool.php?Id=812" title="体脂率（BFR）计算器">
+						<h4>体脂率（BFR）计算器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-hot">
+					<a href="./Tool.php?Id=874" title="舒尔特方格注意力测试">
+													<img src="../UploadFiles/20200116/KUA202001162054410.png" width="96" height="96" class="img-responsive" alt="“舒尔特方格”是全世界范围内最简单，最有效也是最科学的注意力训练方法。又是心理咨询师进行心理治疗时常用的基本方法。这个在线舒尔特方格注意力测试工具，可以帮你更好的测试或训练注意力。">
+											</a>
+					<a href="./Tool.php?Id=874" title="舒尔特方格注意力测试">
+						<h4>舒尔特方格注意力测试</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-hot">
+					<a href="./Tool.php?Id=744" title="番茄时钟">
+													<img src="../UploadFiles/20190208/KUA201902081706300.png" width="96" height="96" class="img-responsive" alt="在线番茄时钟工具">
+											</a>
+					<a href="./Tool.php?Id=744" title="番茄时钟">
+						<h4>番茄时钟</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-hot">
+					<a href="./Tool.php?Id=859" title="椰树椰汁风格图片生成器">
+													<img src="../UploadFiles/20191128/KUA201911282141310.png" width="96" height="96" class="img-responsive" alt="椰树椰汁风格图片生成器，可以生成椰树牌椰汁饮料包装风格图片。">
+											</a>
+					<a href="./Tool.php?Id=859" title="椰树椰汁风格图片生成器">
+						<h4>椰树椰汁风格图片生成器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-hot">
+					<a href="./Tool.php?Id=952" title="原码/反码/补码计算器">
+													<img src="../UploadFiles/20200625/KUA202006251946380.png" width="96" height="96" class="img-responsive" alt="原码/反码/补码计算器，在线计算给定整数的原码/反码/补码。">
+											</a>
+					<a href="./Tool.php?Id=952" title="原码/反码/补码计算器">
+						<h4>原码/反码/补码计算器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-hot">
+					<a href="./Tool.php?Id=864" title="抽象话转换器">
+													<img src="../UploadFiles/20191216/KUA201912162115470.png" width="96" height="96" class="img-responsive" alt="">
+											</a>
+					<a href="./Tool.php?Id=864" title="抽象话转换器">
+						<h4>抽象话转换器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-hot">
+					<a href="./Tool.php?Id=940" title="营销号文案生成器">
+													<img src="../UploadFiles/20200510/KUA202005101857300.png" width="96" height="96" class="img-responsive" alt="营销号文案生成器是最近网络上面挺火的一款恶搞神器，也叫“营销号生成器”、“营销号文章生成器”。营销号文案生成器可以一键生成一段文字，逻辑不通，道理不通，就是一堆无厘头的垃圾话，非常适合营销号写推文。">
+											</a>
+					<a href="./Tool.php?Id=940" title="营销号文案生成器">
+						<h4>营销号文案生成器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-hot">
+					<a href="./Tool.php?Id=740" title="时间差计算器">
+													<img src="../UploadFiles/20190202/KUA201902022020020.png" width="96" height="96" class="img-responsive" alt="时间差计算器是一款可以方便计算出时间差的在线时间差计算器，时间差计算精确到了时分秒，是一款十分不错的时间差计算器。">
+											</a>
+					<a href="./Tool.php?Id=740" title="时间差计算器">
+						<h4>时间差计算器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-hot-vip">
+					<a href="./Tool.php?Id=789" title="举牌小人生成器">
+													<img src="../UploadFiles/20190529/KUA201905292125130.png" width="96" height="96" class="img-responsive" alt="在线举牌小人生成器是一个可在线生成小人举牌加油、告白等有趣图片的在线小工具。
+举牌是一种支持的态度，是一种相信希望的精神，每只可爱的小人都代表着支持你的人，鼓舞着你。举牌世界没有人是孤独的，有时你需要独自面对眼前的难关，举牌小人会陪伴与鼓励你，用举牌挺你走向希望。我们相信有许多美好的事都等着我们高举着，并将这样的精神与鼓励不断地蔓延下去。">
+											</a>
+					<a href="./Tool.php?Id=789" title="举牌小人生成器">
+						<h4>举牌小人生成器</h4>
+					</a>
+				</div>
+							</div>
+			<!-- End -->
+			<h1 class="page-header">最新</h1>
+			<!-- Start -->
+			<div class="row placeholders">
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-new">
+					<a href="./Tool.php?Id=1065" title="代码截图生成器">
+													<img src="../UploadFiles/20221030/KUA202210301953040.png" width="96" height="96" class="img-responsive" alt="代码截图生成器，轻松生成精美的代码截图，完全在线生成，无需 PS 设计软件，傻瓜式编辑功能，也能把枯燥冷冰冰的代码瞬间变成好看有趣的屏幕截图，随时分享到你的微博、朋友圈等等社交软件，这款代码截图生成器，非常值得你使用。">
+											</a>
+					<a href="./Tool.php?Id=1065" title="代码截图生成器">
+						<h4>代码截图生成器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-new">
+					<a href="./Tool.php?Id=1064" title="口号头像生成器">
+													<img src="../UploadFiles/20221029/KUA202210292109220.png" width="96" height="96" class="img-responsive" alt="口号头像生成器，可以在你的头像图像加上一个横幅标语，为你加油打气。">
+											</a>
+					<a href="./Tool.php?Id=1064" title="口号头像生成器">
+						<h4>口号头像生成器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-new">
+					<a href="./Tool.php?Id=1063" title="图片像素化">
+													<img src="../UploadFiles/20221023/KUA202210231146480.png" width="96" height="96" class="img-responsive" alt="图片像素化生成器，可以生成像素化（马赛克）风格的图片和照片的小工具，选择图片或照片即可生成像素化风格的图片！像素块数值越大，照片越模糊，请按照自己的需要设置。">
+											</a>
+					<a href="./Tool.php?Id=1063" title="图片像素化">
+						<h4>图片像素化</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-new">
+					<a href="./Tool.php?Id=1062" title="数字上标下标昵称生成器">
+													<img src="../UploadFiles/20221020/KUA202210202141430.png" width="96" height="96" class="img-responsive" alt="数字上标下标昵称生成器，用于生成带小数字上标或下标的昵称。">
+											</a>
+					<a href="./Tool.php?Id=1062" title="数字上标下标昵称生成器">
+						<h4>数字上标下标昵称生成器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-new">
+					<a href="./Tool.php?Id=1061" title="监控视频时差计算器">
+													<img src="../UploadFiles/20221020/KUA202210202117160.png" width="96" height="96" class="img-responsive" alt="监控视频时差计算器，用于在线校对监控视频与北京时间的时差。当监控视频的时间不准时，本工具可以根据北京时间或监控视频画面显示时间中的其中一个计算出另一个时间。">
+											</a>
+					<a href="./Tool.php?Id=1061" title="监控视频时差计算器">
+						<h4>监控视频时差计算器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-new">
+					<a href="./Tool.php?Id=1060" title="太阳方位角和高度角计算器">
+													<img src="../UploadFiles/20221013/KUA202210132116020.png" width="96" height="96" class="img-responsive" alt="太阳方位角和高度角计算器，可根据输入的当地日期、当地时间和当地经纬度数据计算出所在位置的太阳方位角、太阳高度角、太阳天顶角和太阳时角等信息。">
+											</a>
+					<a href="./Tool.php?Id=1060" title="太阳方位角和高度角计算器">
+						<h4>太阳方位角和高度角计算器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-new">
+					<a href="./Tool.php?Id=1059" title="十二时辰转换">
+													<img src="../UploadFiles/20221018/KUA202210182030460.png" width="96" height="96" class="img-responsive" alt="十二时辰是中国古代计时单位，古人把把一昼夜平分为十二段，每段叫做一个时辰，每个时辰相当于现在的2小时，十二个时辰以地支为名称，相传是根据12生肖中的动物的日常作息时间来命名各个时辰。">
+											</a>
+					<a href="./Tool.php?Id=1059" title="十二时辰转换">
+						<h4>十二时辰转换</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-new">
+					<a href="./Tool.php?Id=1058" title="字帖生成器">
+													<img src="../UploadFiles/20221010/KUA202210102059180.png" width="96" height="96" class="img-responsive" alt="字帖生成工具，可以在线生成田字格、米字格、回宫格等多种字格类型的字帖，支持任意汉字书写，只需要简单设置即可生成你需要的字帖并支持下载和打印。">
+											</a>
+					<a href="./Tool.php?Id=1058" title="字帖生成器">
+						<h4>字帖生成器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-new">
+					<a href="./Tool.php?Id=1057" title="模拟时钟2">
+													<img src="../UploadFiles/20220813/KUA202208131912410.png" width="96" height="96" class="img-responsive" alt="模拟时钟小工具，界面精美，颜值极高，效果简单，就是模拟一个时钟，还有秒针，还可以选择你喜欢的背景颜色。">
+											</a>
+					<a href="./Tool.php?Id=1057" title="模拟时钟2">
+						<h4>模拟时钟2</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-new">
+					<a href="./Tool.php?Id=1056" title="门牌号头像生成器">
+													<img src="../UploadFiles/20221007/KUA202210071441580.png" width="96" height="96" class="img-responsive" alt="门牌号头像生成器可以快速生成带有楼栋号与门牌号的头像，让大家在群里更加清晰地显示每家每户的情况，更方便统计信息。">
+											</a>
+					<a href="./Tool.php?Id=1056" title="门牌号头像生成器">
+						<h4>门牌号头像生成器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-new">
+					<a href="./Tool.php?Id=1055" title="国庆头像生成器">
+													<img src="../UploadFiles/20220928/KUA202209282020490.png" width="96" height="96" class="img-responsive" alt="国庆头像生成器">
+											</a>
+					<a href="./Tool.php?Id=1055" title="国庆头像生成器">
+						<h4>国庆头像生成器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder placeholder-new">
+					<a href="./Tool.php?Id=1054" title="老黄历">
+													<img src="../UploadFiles/20220925/KUA202209252109440.png" width="96" height="96" class="img-responsive" alt="老黄历是在中国农历技术上产生出来的，一种能同时显示公历、农历和干支历等多套历法，并附加大量与趋吉避凶相关的规则和内容的历书。黄历主要内容包括：二十四节气、吉凶宜忌、冲煞、合害、纳音、干支、十二神、值日、胎神、星宿、月相、吉神凶煞、彭祖百忌、六曜、九星、流年、太岁、三元九运、玄空九星、星期、生肖、方位等等。">
+											</a>
+					<a href="./Tool.php?Id=1054" title="老黄历">
+						<h4>老黄历</h4>
+					</a>
+				</div>
+							</div>
+			<!-- End -->
+			<!-- Topic Start -->
+			<h1 class="page-header">专题</h1>
+			<div class="row placeholders">
+				 
+				<div class="col-xs-3 col-sm-2 placeholder">
+					<a href="./Topic.php?Id=10" title="那些有趣又好玩的小工具">
+						<img src="../UploadFiles/20220902/KUA202209021613150.png" width="96" height="96" class="img-responsive">
+					</a>
+					<a href="./Topic.php?Id=10" title="那些有趣又好玩的小工具">
+						<h4>有趣又好玩的小工具</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder">
+					<a href="./Topic.php?Id=9" title="">
+						<img src="../UploadFiles/20210915/KUA202109151955060.png" width="96" height="96" class="img-responsive">
+					</a>
+					<a href="./Topic.php?Id=9" title="">
+						<h4>数学计算器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder">
+					<a href="./Topic.php?Id=8" title="">
+						<img src="../UploadFiles/20210403/KUA202104031538430.png" width="96" height="96" class="img-responsive">
+					</a>
+					<a href="./Topic.php?Id=8" title="">
+						<h4>地理数据工具</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder">
+					<a href="./Topic.php?Id=6" title="">
+						<img src="../UploadFiles/20200929/KUA202009291958430.png" width="96" height="96" class="img-responsive">
+					</a>
+					<a href="./Topic.php?Id=6" title="">
+						<h4>健身达人必备</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder">
+					<a href="./Topic.php?Id=4" title="制作趣味头像的专题，涵盖了多种类型的头像制作小工具，功能十分强大，各种类型的头像都能在线一一制作完成，满足不同的头像制作需求，随时随地在线制作自己喜欢的头像，为你打造专属的头像。">
+						<img src="../UploadFiles/20200918/KUA202009182042470.png" width="96" height="96" class="img-responsive">
+					</a>
+					<a href="./Topic.php?Id=4" title="制作趣味头像的专题，涵盖了多种类型的头像制作小工具，功能十分强大，各种类型的头像都能在线一一制作完成，满足不同的头像制作需求，随时随地在线制作自己喜欢的头像，为你打造专属的头像。">
+						<h4>头像生成器</h4>
+					</a>
+				</div>
+				 
+				<div class="col-xs-3 col-sm-2 placeholder">
+					<a href="./Topic.php?Id=7" title="图表生成器，零编程制作图表，所见即所得。">
+						<img src="../UploadFiles/20201101/KUA202011011122410.png" width="96" height="96" class="img-responsive">
+					</a>
+					<a href="./Topic.php?Id=7" title="图表生成器，零编程制作图表，所见即所得。">
+						<h4>图表生成器</h4>
+					</a>
+				</div>
+							</div>
+			<!-- Topic End -->
+			
+			<div class="row margin-t-18">
+				<div class="col-xs-12">
+				  <div class="panel panel-default" style="margin-bottom: 0px;">
+					<div class="panel-body" id="app-coupon-search" style="border-radius: 4px; color: #fff;">
+					  <div class="row">
+						<div class="col-xs-12 col-sm-12">
+						  <div style="color: #FFF; font-size:15px;">
+							<p>Hi！“一个小工具箱”iOS版App已上线！一个便捷好用的全能小工具集合，囊括文字编辑、计算换算、日期时间、图像图形、金融理财、日常生活等众多实用小工具。</p>
+							<p style="margin: 0px;">iOS版：AppStore搜索“一个小工具箱” 或 
+							  <button id="btn-app-download-ios" type="button" class="btn btn-default" onclick="Bind_Download('ios')">
+								<span class="glyphicon glyphicon-download" aria-hidden="true"></span> 点此下载安装
+							  </button>
+							</p>
+							<p>
+							  	微信小程序版：微信搜索“一个小工具箱”
+							</p>
+							<p style="margin: 0px;">
+								安卓版【声明】：本站暂未发布安卓版（Android版）App，所有名称为“一个工具箱”或“一个小工具箱”的安卓版App均为仿冒，请谨慎下载安装！
+							</p>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			</div>
+			<h1 class="page-header"></h1>
+			<footer class="footer">
+				<p class="text-center text-muted">
+					<!-- <a href="#" id="iOSLink" disabled="true" title="App Store搜索：一个小工具箱" onclick="Bind_Download('ios')">iOS版App下载</a> ·  -->
+					<!-- <a id="mpLink" href="./Article.php?Id=1751" disabled="true" data-toggle="popover" data-placement="top" title="微信搜索：一个小工具箱">微信小程序</a> ·  -->
+					<a href="./A2hs.php">添加到主屏幕</a> · <a href="./About.php">关于本站</a> · <a href="./Links.php">友情链接</a>
+				</p>
+				<p class="text-center text-muted">
+					版权所有 © 2018-2022 atoolbox.net
+				</p>
+			</footer>
+        </div>
+      </div>
+	</div>
+	<!--全局遮罩层开始-->
+	<div class="layer"></div>
+	<div id="globalAd">
+		<span onclick="CloseGlobalAd();" class="closeIco"></span>
+		<a target="_blank" class="globalContent">
+			<div id="a-mmredbox-cover" class="mmredbox_cover">  
+				<img src="./" id="a-mmredbox-cover-img" class="mmredbox_cover_img">  
+			</div>
+		</a>
+	</div>
+	<!--全局遮罩层结束-->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Scripts/jquery-3.3.1.min.js"></script>
+    <script src="./Scripts/bootstrap.min.js"></script>
+	<script src="./Scripts/owl.carousel.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="./Scripts/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="./Scripts/ie10-viewport-bug-workaround.js"></script>
+	<script src="./Scripts/jquery.cookie.min.js"></script>
+	<script src="./Scripts/jquery.search.js"></script>
+	<script src="./Scripts/baidu.tongji.js"></script>
+	<script src="./Scripts/jquery.ad-1.0.0.js"></script>
+	<script src="./Scripts/geopattern.min.js"></script>
+	<script>
+		$(function () {
+			// 随机背景
+			$("#app-coupon-search").geopattern(Math.random().toString());
+			$('#apps-testimonials').owlCarousel({
+				loop: true,
+				center: true,
+				items: 3,
+				margin: 0,
+				autoplay: false,
+				dots:true,
+				autoplayTimeout: 8500,
+				smartSpeed: 450,
+				responsive: {
+					0: {
+						items: 1
+					},
+					768: {
+						items: 2
+					},
+					1170: {
+						items: 3
+					}
+				}
+			});
+			HtmlBind_Search();
+			Bind_Tongji();
+		});
+	</script>
+  </body>
+</html>
