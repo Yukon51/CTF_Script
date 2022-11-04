@@ -51,9 +51,9 @@ def select_website(from_except=False):
     show_table()
     while True:
         if from_except:
-            choice = console.input(f"[bold blue][-] 无法正常解开, 请选择您想要的使用的网站? (1~{len(url_dict)+1}, 回车则使用默认网站): [/]")
+            choice = console.input(f"[bold blue][+] 无法正常解开, 请选择您想要的使用的网站? (1~{len(url_dict)+1}, 回车则使用默认网站): [/]")
         else:
-            choice = console.input(f"[bold blue][-] 选择您想要的使用的网站? (1~{len(url_dict)+1}, 回车则使用默认网站): [/]")
+            choice = console.input(f"[bold blue][+] 选择您想要的使用的网站? (1~{len(url_dict)+1}, 回车则使用默认网站): [/]")
 
         if choice == "":
             choice = "1"
@@ -63,14 +63,14 @@ def select_website(from_except=False):
         else:
             console.print("[-] 输入错误, 请重新输入!", style="bold blue")
 
-    online = console.input("[bold blue][-] 是否在线访问网站? [/]([bold green]y[/]/[bold red]N[/]): ") in ["y", "Y"]
+    online = console.input("[bold blue][+] 是否在线访问网站? [/]([bold green]y[/]/[bold red]N[/]): ") in ["y", "Y"]
     open_website(choice, online)
 
 if __name__ == "__main__":
     try:
         console.print("[-] 已经为您解开, 结果如下: ", style="bold blue")
         console.print(zwsp_steg.decode(data), style="bold red")
-        if console.input("[bold blue][-] 是否需要网站呢? [/]([bold green]y[/]/[bold red]N[/]): ") in ["y", "Y"]:
+        if console.input("[bold blue][+] 是否需要网站呢? [/]([bold green]y[/]/[bold red]N[/]): ") in ["y", "Y"]:
             select_website()
         else:
             console.print("[-] 欢迎下次使用!", style="bold blue")
