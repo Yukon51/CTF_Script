@@ -12,7 +12,7 @@
             "console": "integratedTerminal",
             "justMyCode": true,
             "args": [
-                "-f", "show.bin"
+                "-f", "zero-width/demo/flag.txt"
             ]
         }
     ]
