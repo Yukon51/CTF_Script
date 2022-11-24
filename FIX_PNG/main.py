@@ -42,7 +42,7 @@ def crack_no_inter(bt_ch, width, data, tmppath, chuncks):
                     headcrc = zlib.crc32(head[12:])
                     head = head + headcrc.to_bytes(4, 'big')
                     print(f"[-] 宽度: {w}, hex: {hex(w)}")
-                    print(f"[-] 高度: {len(data1)}, hex: {hex(len(data1))}")
+                    print(f"[-] 高度: {len(data1)}, hex: {hex(len(data1))}\n")
                     with open(f"{tmppath}{w}X{len(data1)}_{colortype}_{colorchannel}_{bits}.png", 'wb') as fw:
                         fw.write(head + b''.join(chuncks))
                 elif len(data1) == 1:
