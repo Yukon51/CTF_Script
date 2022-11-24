@@ -13,14 +13,14 @@ def is_Conform(text):
     return all(chra in string.ascii_letters or ord(chra) in string.ascii_uppercase for chra in text)
 
 def input_key():
-    key = console.input("[bold red][+] Input Key: [/bold red]")
+    key = console.input("[bold red][+] Input Key: [/]")
     if is_Conform(key):
         return key
     console.print("[-] 密钥格式有误!", style="bold red")
     exit(-1)
 
 def input_table():
-    table = console.input("[bold red][+] 请输入标准表[/bold red][bold blue](回车则默认使用标准表): [/bold blue]")
+    table = console.input("[bold red][+] 请输入标准表[/][bold blue](回车则默认使用标准表): [/]")
 
     if table == "": # 如果标准表为空返回None
         return None
@@ -30,7 +30,7 @@ def input_table():
     exit(-1)
 
 def input_tables():
-    tables = console.input("[bold red][+] 请输入26x26密码表[/bold red][bold blue](回车则默认使用标准密码表): [/bold blue]")
+    tables = console.input("[bold red][+] 请输入26x26密码表[/][bold blue](回车则默认使用标准密码表): [/]")
     if tables == "":
         return None
     tables = [list(i) for i in tables.split(",")]
@@ -40,7 +40,7 @@ def caesar(plan_text):
     # 使用凯撒遍历常规偏移的情况
     console.print("[-] 常规偏移:", style="bold magenta")
     for offset in range(1, 26):
-        console.print("[-] [bold magenta]offset[/bold magenta]: [bold blue]%2s[/bold blue], [bold magenta]Cipher Text[/bold magenta]: %s" % (offset, Caesar.Caesar(offset=offset).decipher(plan_text)), style="bold red on white")
+        console.print("[-] [bold magenta]offset[/]: [bold blue]%2s[/], [bold magenta]Cipher Text[/]: %s" % (offset, Caesar.Caesar(offset=offset).decipher(plan_text)), style="bold red on white")
 
 def output_table(tables, plan_text=None, cipher_text=None, encipher=False):
     if encipher:
@@ -55,8 +55,8 @@ def output_table(tables, plan_text=None, cipher_text=None, encipher=False):
 if __name__ == "__main__":
     console.print("Byxs20's Vigenere Cipher Tools", style="bold magenta")
 
-    if (choice := console.input("[bold magenta][+] 请问选择您的操作? [bold blue] <1.加密, 2.解密, 3.推算密钥>(回车默认解密): [/bold blue][/bold magenta]")) in ["", "2"]:
-        cipher_text = console.input("[bold red][+] Input Cipher Text: [/bold red]")
+    if (choice := console.input("[bold magenta][+] 请问选择您的操作? [bold blue] <1.加密, 2.解密, 3.推算密钥>(回车默认解密): [/][/]")) in ["", "2"]:
+        cipher_text = console.input("[bold red][+] Input Cipher Text: [/]")
         key = input_key()
         table = input_table()
         tables = input_tables()
@@ -72,7 +72,7 @@ if __name__ == "__main__":
         else:
             output_table(tables=tables, cipher_text=cipher_text, encipher=False)
     elif choice == "1":
-        plan_text = console.input("[bold red][+] Input Plan Text: [/bold red]")
+        plan_text = console.input("[bold red][+] Input Plan Text: [/]")
         key = input_key()
         table = input_table()
         tables = input_tables()
@@ -90,9 +90,10 @@ if __name__ == "__main__":
     elif choice == "3":
         table = input_table()
         tables = input_tables()
-        cipher_text = console.input("[bold red][+] Input Cipher Text: [/bold red]")
-        plan_text = console.input("[bold red][+] Input Plan Text[bold /red][bold blue](回车默认使用FLAG作为明文): [/bold blue]")
+        cipher_text = console.input("[bold red][+] Input Cipher Text: [/]")
+        plan_text = console.input("[bold red][+] Input Plan Text[/][bold blue](回车默认使用FLAG作为明文): [/]")
         if plan_text == "":
             plan_text = "flag"
-        key = Vigenere.Vigenere(tables=tables, col_table=table).get_key(cipher_text, plan_text)
-        console.print(f"\n[-] 推算密钥: {key}", style="bold red on white")
+        console.print(f"\n[-] 修改行标准表 Key: {Vigenere.Vigenere(tables=tables, col_table=table).get_key(cipher_text, plan_text)}", style="bold red on white")
+        console.print(f"[-] 修改列标准表 Key: {Vigenere.Vigenere(tables=tables, row_table=table).get_key(cipher_text, plan_text)}", style="bold red on white")
+        console.print(f"[-] 修改列和列标准表 Key: {Vigenere.Vigenere(tables=tables, col_table=table, row_table=table).get_key(cipher_text, plan_text)}", style="bold red on white")
