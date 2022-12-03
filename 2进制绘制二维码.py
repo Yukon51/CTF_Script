@@ -46,8 +46,6 @@ if __name__ == '__main__':
             left_top = (j, i)
             left_top_point.append(left_top)
 
-        draw_QR(img1, reverse=False)
-
         cv2.imwrite(f"./out/{col}_{row}.png", draw_QR(img1, reverse=False))
         cv2.imwrite(f"./out/{col}_{row}_reverse.png", draw_QR(img2, reverse=True))
         print(f"[-] 宽度:{col:6} 高度:{row:6}, 已保存在运行目录out中...")
