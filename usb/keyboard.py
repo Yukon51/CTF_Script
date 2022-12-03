@@ -16,7 +16,7 @@ import os
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("-f", type=str, default="out.txt", required=False,
-                    help="输入同级目录下图片的名称")
+                    help="输入同级目录下的名称")
 args  = parser.parse_args()
 
 FILE_PATH = os.path.abspath(args.f)

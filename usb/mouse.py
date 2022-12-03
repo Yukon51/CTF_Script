@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-f", type=str, default="out.txt", required=False,
-                    help="输入同级目录下图片的名称")
+                    help="输入同级目录下的名称")
 args  = parser.parse_args()
 
 TITLE = ["LEFT", "RIGHT", "ALL", "MOVE_LEFT", "MOVE_RIGHT", "MOVE_ALL"]
