@@ -37,13 +37,14 @@ def dearnold(img, a, b):
 file_name = os.path.abspath(args.f).split("\\")[-1]
 img = cv2.imread(args.f, cv2.IMREAD_COLOR)
 r, c = img.shape[:2]
+a, b = args.a, args.b
 
 if r == c:
     if args.t == "encode":
-        img = arnold(img, a=args.a, b=args.b)
+        new_img = arnold(img, a, b)
     elif args.t == "decode":
-        img = dearnold(img, a=args.a, b=args.b)
+        new_img = dearnold(img, a, b)
 else:
     print("[-] 图片宽高不一致, 无法进行猫脸变化!")
 
-cv2.imwrite(f"Arnold_{file_name}", img)
+cv2.imwrite(f"./Arnold_{a}_{b}_{file_name}", new_img)
