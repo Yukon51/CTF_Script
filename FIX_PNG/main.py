@@ -12,8 +12,8 @@ parser.add_argument("-f", type=str, default=None, required=True,
 args  = parser.parse_args()
 
 png_name = args.f.split("\\")[-1]
-base_dir = os.getcwd()
-png_dir = os.path.join(base_dir, png_name)
+png_dir = os.path.abspath(args.f)
+base_dir = os.path.dirname(png_dir)
 
 bin_data = open(png_dir, 'rb').read()
 crc32key = zlib.crc32(bin_data[12:29]) # 计算crc
@@ -98,9 +98,10 @@ if __name__ == '__main__':
         print("[-] 计算CRC32, 宽高没有问题, 开始尝试暴力破解!(感谢老铜匠)")
         pngbaoli_def(args.f)
     else:
-        for width, height in itertools.product(range(4095), range(4095)): # 理论上0x FF FF FF FF，但考虑到屏幕实际/cpu，0x 0F FF就差不多了，也就是4095宽度和高度
+        for width, height in itertools.product(range(0x1FFF), range(0x1FFF)): # 理论上0x FF FF FF FF，但考虑到屏幕实际/cpu，0x1FFF就差不多了，也就是8191宽度和高度
             data = bin_data[12:16] + struct.pack('>i', width) + struct.pack('>i', height) + bin_data[24:29]
             crc32 = zlib.crc32(data)
+            
             if(crc32 == original_crc32): # 计算当图片大小为width:height时的CRC校验值，与图片中的CRC比较，当相同，则图片大小已经确定
                 with open(os.path.join(base_dir, f"fix_{png_name}"), "wb") as f:
                     print(f"[-] CRC32: {hex(original_crc32)}")
