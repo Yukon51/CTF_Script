@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 parser = argparse.ArgumentParser()
 parser.add_argument("-f", type=str, default="out.txt", required=False,
                     help="输入同级目录下的名称")
+parser.add_argument("-new", nargs='?', const=True, default=False,
+                    help="提取另一部分字节进行绘图")
 args  = parser.parse_args()
 
 TITLE = ["LEFT", "RIGHT", "ALL", "MOVE_LEFT", "MOVE_RIGHT", "MOVE_ALL"]
@@ -23,10 +25,11 @@ def get_pos():
     posx, posy = 0, 0
     pos_left, pos_right, pos_all = [], [], []
     for line in data:
-        x, y = int(line[2:4], 16), int(line[5:7], 16)
+        x, y = (int(line[4:6], 16), int(line[8:10], 16)) if args.new else (int(line[2:4], 16), int(line[5:7], 16))
+            
         if x > 127:
             x -= 256
-        if y > 115:
+        if y > 127:
             y -= 256
         posx += x
         posy += y
