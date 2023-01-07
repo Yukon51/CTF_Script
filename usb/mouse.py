@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-f", type=str, default="out.txt", required=False,
+parser.add_argument("-f", type=str, default=None, required=True,
                     help="输入同级目录下的名称")
 parser.add_argument("-new", nargs='?', const=True, default=False,
                     help="提取另一部分字节进行绘图")
