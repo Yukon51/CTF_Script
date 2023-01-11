@@ -4,10 +4,12 @@ import shutil
 import argparse
 import itertools
 import numpy as np
-from tqdm import tqdm
+from PIL import Image
 
 
 parser = argparse.ArgumentParser()
+parser.add_argument('-f', type=str, default=1,
+                    help='图片路径')
 parser.add_argument('-size', type=int, default=1,
                     help='图片放大倍数(默认1倍) 待开发')
 parser.add_argument('-inversion', nargs='?', const=True, default=False,
@@ -15,26 +17,17 @@ parser.add_argument('-inversion', nargs='?', const=True, default=False,
 args = parser.parse_args()
 # INTER_NEAREST
 
-base_dir = os.path.dirname(os.path.abspath(__file__))
-source_path, target_path = os.path.join(base_dir, "source"), os.path.join(base_dir, "target")
+file_path = os.path.abspath(args.f)
+file_name = os.path.splitext(file_path)[0].split("\\")[-1]
+save_path = os.path.join(os.path.dirname(file_path), file_name)
 
-
-def img_rename(path, index):
-    file_tail = os.path.splitext(file_name)[-1] # 从后往前遍历，文件尾部在后面，可以节省遍历次数
-    rename_path = os.path.join(source_path, f"{index}{file_tail}")
-    os.rename(path, rename_path)
-    return rename_path
-    
-def makedir(path):
-    if not os.path.exists(path):
-        os.makedirs(path)
 
 def get_channel_dic(shape):
     try:
         if shape[2] == 3:
             channel_dic = ["Blue", "Green", "Red"]
         elif shape[2] == 4:
-            channel_dic = ["Blue", "Green", "Red", "Alpha"]
+            channel_dic = ["Alpha", "Blue", "Green", "Red"]
     except IndexError:
         return ["Gray"]
     return channel_dic
@@ -52,32 +45,31 @@ def split_channel_bit(img, height, width):
 def colour_inversion(img):
     return 255 ^ img
 
-# delete target and makedirs
-shutil.rmtree(target_path)
-os.makedirs(target_path)
+if __name__ == '__main__':
+    # delete target and makedirs
+    if os.path.exists(save_path):
+        shutil.rmtree(save_path)
+    os.makedirs(save_path)
 
-with tqdm(enumerate(os.listdir(source_path)), desc="Channel Split") as bar:
-    for index, file_name in bar:
-        # rename img name
-        img_path = os.path.join(source_path, f"{file_name}")
-        rename_path = img_rename(img_path, index)
+    # read img
+    img = Image.open(file_path)
+    img = np.array(img, np.uint8)[:,:,::-1]
+    # img = cv2.imread(file_path, cv2.IMREAD_UNCHANGED)
+    height, width = img.shape[:2]
+    print(img.shape)
 
-        # create save dirs
-        save_path = os.path.join(target_path, f"{index}")
-        makedir(save_path)
+    # image inversion
+    if args.inversion:
+        save_img = colour_inversion(img)
+        save_img = Image.fromarray(save_img)
+        save_img.save(os.path.join(save_path, "Colour Inversion.png"))
 
-        # read img
-        img = cv2.imread(rename_path, cv2.IMREAD_UNCHANGED)
-        height, width = img.shape[:2]
-
-        # image inversion
-        if args.inversion:
-            cv2.imwrite(os.path.join(save_path, "Colour Inversion.png"), colour_inversion(img))
-
-        # split channel
-        channel_dic = get_channel_dic(img.shape)
-        for channel, channel_str in enumerate(channel_dic):
-            channel_img = img[:, :] if len(channel_dic) == 1 else img[:, :, channel]
-            np_bit = split_channel_bit(channel_img, height, width)
-            for i in range(8):
-                cv2.imwrite(os.path.join(save_path, f"{channel_str} plane {i}.png"), np_bit[:, 7-i].reshape(height, width, 1))
+    # split channel
+    channel_dic = get_channel_dic(img.shape)
+    for channel, channel_str in enumerate(channel_dic):
+        channel_img = img[:, :] if len(channel_dic) == 1 else img[:, :, channel]
+        np_bit = split_channel_bit(channel_img, height, width)
+        for i in range(8):
+            save_img = np_bit[:, 7-i].reshape(height, width).astype(np.uint8)
+            save_img = Image.fromarray(save_img, "L")
+            save_img.save(os.path.join(save_path, f"{channel_str} plane {i}.png"))
