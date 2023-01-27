@@ -70,8 +70,6 @@ def get_info(original=False):
             continue
 
         if line[4:6] in normalKeys:
-            if line[4:6] == '2f':
-                print(int(line[:2], 16))
             output += shiftKeys[line[4:6]] if (int(line[:2], 16) >> 1 & 1 == 1) or (int(line[:2], 16) >> 6 & 1 == 1) else normalKeys[line[4:6]]
     return output
 
