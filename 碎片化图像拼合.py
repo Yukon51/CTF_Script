@@ -26,5 +26,4 @@ while len(imgs) > 1:
 
     imgs[0] = combine(imgs[0], imgs[index])
     imgs.pop(index)
-
 cv2.imwrite("flag.png", imgs[0])
